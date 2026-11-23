@@ -1,0 +1,295 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Badge from "../Badge.astro";
+import FilterBar from "../FilterBar.astro";
+import GameCard from "../GameCard.astro";
+import Icon from "../Icon.astro";
+import ProjectRow from "../ProjectRow.astro";
+import { GITHUB_REPO } from "../../config";
+import { routes } from "../../i18n/routes";
+import { otherLang, type Lang } from "../../i18n/types";
+import { ui } from "../../i18n/ui";
+import {
+  formatDate,
+  formatNumber,
+  formatRelative,
+  formatYear,
+  projectsCount
+} from "../../lib/format";
+import {
+  getRelatedGames,
+  type GameView,
+  type ProjectView
+} from "../../lib/data";
+import { absoluteUrl, withBase } from "../../lib/url";
+
+interface Props {
+  lang: Lang;
+  game: GameView;
+}
+
+const { lang, game } = Astro.props;
+const t = ui[lang];
+const year = formatYear(game.year, lang);
+const description =
+  lang === "es" ? game.description_es : game.description_en;
+const lastActivity = formatRelative(game.lastActivity, lang);
+const lastActivityDate = formatDate(game.lastActivity, lang);
+const related = getRelatedGames(game, 3);
+const canonicalPath = routes.game(lang, game.id);
+const alternatePath = routes.game(otherLang(lang), game.id);
+const issueUrl = `${GITHUB_REPO}/issues/new?template=add-project.yml&title=${encodeURIComponent(
+  `${lang === "es" ? "[Proyecto]" : "[Project]"} ${game.title}`
+)}`;
+
+const projectUrl = (project: ProjectView) =>
+  absoluteUrl(routes.project(lang, project.id), Astro.site);
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    name: game.title,
+    description,
+    ...(year ? { datePublished: String(game.year) } : {}),
+    genre: game.genres,
+    gamePlatform: game.platforms,
+    applicationCategory: "Game",
+    url: absoluteUrl(canonicalPath, Astro.site)
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `${game.title} · ${t.game.projects}`,
+    numberOfItems: game.allProjects.length,
+    itemListElement: game.allProjects.map((project, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: project.name,
+      url: projectUrl(project)
+    }))
+  }
+];
+
+const metaRows = [
+  { label: t.common.year, value: year },
+  { label: t.common.platforms, value: game.platforms.join(", ") },
+  { label: t.common.genres, value: game.genres.join(", ") },
+  { label: t.common.developers, value: game.developers.join(", ") },
+  { label: t.common.series, value: game.series }
+].filter((row) => row.value);
+---
+
+<BaseLayout
+  lang={lang}
+  title={game.title}
+  description={description}
+  canonicalPath={canonicalPath}
+  alternatePath={alternatePath}
+  jsonLd={jsonLd}
+>
+  <section class="container-page detail-hero">
+    <nav class="breadcrumbs" aria-label={t.nav.breadcrumb}>
+      <a href={withBase(routes.home[lang])}>{t.common.home}</a>
+      <Icon name="chevronRight" size={12} />
+      <a href={withBase(routes.games[lang])}>{t.nav.games}</a>
+      <Icon name="chevronRight" size={12} />
+      <span>{game.title}</span>
+    </nav>
+
+    <h1 class="detail-title">{game.title}</h1>
+    <p class="detail-subtitle">{description}</p>
+
+    <div class="detail-meta">
+      {year && <Badge label={year} tone="slate" outline />}
+      {game.genres.map((genre) => (
+        <Badge label={genre} tone="slate" outline />
+      ))}
+      {game.platforms.slice(0, 4).map((platform) => (
+        <Badge label={platform} tone="slate" outline />
+      ))}
+      {game.wanted && <Badge label={t.badges.wanted} tone="amber" dot />}
+    </div>
+
+    <div class="stats-row mb-0 mt-6">
+      <div class="stat">
+        <div class="stat-value">{formatNumber(game.projectCount, lang)}</div>
+        <div class="stat-label">{t.game.projectLabel(game.projectCount)}</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">{formatNumber(game.activeCount, lang)}</div>
+        <div class="stat-label">{t.game.activeProjectLabel(game.activeCount)}</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">{formatNumber(game.specificCount, lang)}</div>
+        <div class="stat-label">
+          {t.game.specificProjectLabel(game.specificCount)}
+        </div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">{formatNumber(game.compatibleCount, lang)}</div>
+        <div class="stat-label">
+          {t.game.compatibleLabel(game.compatibleCount)}
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-5 flex flex-wrap items-center gap-2 text-xs text-muted">
+      {lastActivity && (
+        <span class="inline-flex items-center gap-1.5">
+          <Icon name="clock" size={14} />
+          {t.game.lastActivity}:{" "}
+          <time datetime={game.lastActivity ?? undefined} title={lastActivityDate ?? undefined}>
+            {lastActivity}
+          </time>
+        </span>
+      )}
+      <a class="btn btn-sm" href={issueUrl} target="_blank" rel="noopener noreferrer">
+        <Icon name="plus" size={14} />
+        {t.game.addProject}
+      </a>
+    </div>
+  </section>
+
+  <div class="container-page detail-layout">
+    <div>
+      <section>
+        <div class="section-head mb-3">
+          <div>
+            <h2 class="section-title">
+              {t.game.specificProjectLabel(game.specificCount)}
+            </h2>
+            <p class="section-subtitle">
+              {projectsCount(game.specificCount, lang)}
+            </p>
+          </div>
+        </div>
+
+        {game.specificCount > 0 ? (
+          <>
+            <FilterBar lang={lang} game={game} />
+            <ul class="project-list mt-4" data-project-list>
+              {game.specificProjects.map((project) => (
+                <ProjectRow project={project} lang={lang} />
+              ))}
+            </ul>
+          </>
+        ) : (
+          <div class="empty-state">
+            <p class="empty-state-title">
+              {game.wanted ? t.game.wantedTitle : t.game.noProjects}
+            </p>
+            <p class="empty-state-text">
+              {game.wanted ? t.game.wantedText : t.game.noProjectsHint}
+            </p>
+            <div class="empty-state-actions">
+              <a class="btn btn-primary" href={issueUrl} target="_blank" rel="noopener noreferrer">
+                <Icon name="plus" size={14} />
+                {t.game.addProject}
+              </a>
+              <a class="btn" href={withBase(routes.contribute[lang])}>
+                {t.home.contributeCta}
+              </a>
+            </div>
+          </div>
+        )}
+      </section>
+
+      {
+        game.compatibleCount > 0 && (
+          <section class="mt-10">
+            <div class="section-head mb-3">
+              <div>
+                <h2 class="section-title">
+                  {t.game.compatibleLabel(game.compatibleCount)}
+                </h2>
+                <p class="section-subtitle">{t.game.compatibleNote}</p>
+              </div>
+            </div>
+            <ul class="project-list">
+              {game.compatibleProjects.map((project) => (
+                <ProjectRow project={project} lang={lang} />
+              ))}
+            </ul>
+          </section>
+        )
+      }
+
+      {
+        related.length > 0 && (
+          <section class="mt-10">
+            <div class="section-head mb-3">
+              <h2 class="section-title">{t.game.related}</h2>
+            </div>
+            <div class="card-grid card-grid-3">
+              {related.map((relatedGame) => (
+                <GameCard game={relatedGame} lang={lang} />
+              ))}
+            </div>
+          </section>
+        )
+      }
+    </div>
+
+    <aside class="detail-aside">
+      <div class="meta-card">
+        <p class="meta-card-title">{t.game.about}</p>
+        <div class="meta-list">
+          {metaRows.map((row) => (
+            <div class="meta-list-row">
+              <span class="meta-list-label">{row.label}</span>
+              <span class="meta-list-value">{row.value}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {game.aliases.length > 0 && (
+        <div class="meta-card">
+          <p class="meta-card-title">{t.game.aliases}</p>
+          <div class="tag-list">
+            {game.aliases.map((alias) => (
+              <span class="tag">{alias}</span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div class="meta-card">
+        <p class="meta-card-title">{t.game.projects}</p>
+        <div class="meta-list">
+          <div class="meta-list-row">
+            <span class="meta-list-label">{t.game.specificProjects}</span>
+            <span class="meta-list-value">{game.specificCount}</span>
+          </div>
+          <div class="meta-list-row">
+            <span class="meta-list-label">{t.game.compatible}</span>
+            <span class="meta-list-value">{game.compatibleCount}</span>
+          </div>
+          <div class="meta-list-row">
+            <span class="meta-list-label">{t.game.activeProjects}</span>
+            <span class="meta-list-value">{game.activeCount}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meta-card">
+        <p class="meta-card-title">{t.project.links}</p>
+        <div class="footer-links">
+          <a class="inline-flex items-center gap-2" href={withBase(routes.tools[lang])}>
+            <Icon name="layers" size={14} />
+            {t.nav.tools}
+          </a>
+          <a class="inline-flex items-center gap-2" href={withBase(routes.games[lang])}>
+            <Icon name="gamepad" size={14} />
+            {t.nav.games}
+          </a>
+          <a class="inline-flex items-center gap-2" href={issueUrl} target="_blank" rel="noopener noreferrer">
+            <Icon name="plus" size={14} />
+            {t.game.addProject}
+          </a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</BaseLayout>

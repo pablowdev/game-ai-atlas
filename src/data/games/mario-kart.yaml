@@ -1,0 +1,19 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: mario-kart
+title: Mario Kart
+aliases:
+  - Super Mario Kart
+  - Mario Kart 64
+year: 1992
+platforms:
+  - SNES
+  - N64
+genres:
+  - Carreras
+series: Super Mario
+developers:
+  - Nintendo
+description_es: Juego de carreras con objetos, inspiración de remakes y agentes.
+description_en: Item-based racing game, inspiration for remakes and agents.

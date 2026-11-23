@@ -1,0 +1,25 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: unity-technologies-ml-agents
+name: ML-Agents
+repo: Unity-Technologies/ml-agents
+homepage: https://unity.com/products/machine-learning-agents
+games: []
+game_scope: general
+relation: tool
+ai_role: research
+tech:
+  - reinforcement-learning
+  - imitation-learning
+description_es: Toolkit de Unity para entrenar agentes en juegos y simulaciones.
+description_en: Unity toolkit for training agents in games and simulations.
+requires_original_game: false
+uses_original_assets: false
+playable_in_browser: false
+links:
+  docs: https://unity.com/products/machine-learning-agents
+tags:
+  - framework
+  - unity
+review_status: approved

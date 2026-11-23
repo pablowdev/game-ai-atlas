@@ -1,0 +1,23 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: ppaquette-gym-doom
+name: gym-doom
+repo: ppaquette/gym-doom
+games:
+  - doom
+game_scope: specific
+relation: environment
+ai_role: research
+tech:
+  - reinforcement-learning
+description_es: Entornos de Gym basados en ViZDoom para entrenar agentes en Doom.
+description_en: Gym environments based on ViZDoom for training agents in Doom.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+tags:
+  - fps
+  - gym
+  - legacy
+review_status: approved

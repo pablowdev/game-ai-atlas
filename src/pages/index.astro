@@ -1,0 +1,21 @@
+---
+import { withBase } from "../lib/url";
+
+const target = withBase("/es/");
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href={target} />
+    <title>Game AI Atlas</title>
+  </head>
+  <body>
+    <p>
+      <a href={target}>Game AI Atlas · Español</a>
+    </p>
+  </body>
+</html>

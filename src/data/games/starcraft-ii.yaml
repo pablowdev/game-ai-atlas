@@ -1,0 +1,18 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: starcraft-ii
+title: StarCraft II
+aliases:
+  - SC2
+year: 2010
+platforms:
+  - PC
+genres:
+  - RTS
+series: StarCraft
+developers:
+  - Blizzard Entertainment
+description_es: RTS de ciencia ficción usado en AlphaStar y en benchmarks de multiagente.
+description_en: Sci-fi RTS used in AlphaStar and multi-agent benchmarks.
+featured: true

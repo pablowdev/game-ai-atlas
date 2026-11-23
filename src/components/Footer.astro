@@ -1,0 +1,94 @@
+---
+import Icon from "./Icon.astro";
+import {
+  CODE_LICENSE,
+  DATA_LICENSE,
+  GITHUB_REPO,
+  SITE_NAME
+} from "../config";
+import { routes } from "../i18n/routes";
+import type { Lang } from "../i18n/types";
+import { ui } from "../i18n/ui";
+import { getData } from "../lib/data";
+import { formatDate } from "../lib/format";
+import { withBase } from "../lib/url";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const data = getData();
+const updated = formatDate(data.stats.updatedAt, lang);
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container-page">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-title">{SITE_NAME}</p>
+        <p class="mt-2 max-w-sm leading-relaxed">{t.footer.disclaimer}</p>
+        <p class="mt-3 text-[0.74rem]">
+          {updated
+            ? `${t.footer.dataUpdated}: ${updated}`
+            : lang === "es"
+              ? "Datos de ejemplo; ejecuta la sincronización para actualizarlos."
+              : "Sample data; run the sync to refresh it."}
+        </p>
+      </div>
+
+      <div>
+        <p class="footer-title mb-2">{t.footer.explore}</p>
+        <div class="footer-links">
+          <a href={withBase(routes.games[lang])}>{t.nav.games}</a>
+          <a href={withBase(routes.tools[lang])}>{t.nav.tools}</a>
+          <a href={withBase(routes.contribute[lang])}>{t.nav.contribute}</a>
+          <a href={withBase(routes.about[lang])}>{t.nav.about}</a>
+          <a
+            href={GITHUB_REPO}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${SITE_NAME} · GitHub`}
+          >
+            {t.footer.github}
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <p class="footer-title mb-2">{t.footer.resources}</p>
+        <div class="footer-links">
+          <a
+            href={`${GITHUB_REPO}/blob/main/LICENSE`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t.footer.code}: {CODE_LICENSE}
+          </a>
+          <a
+            href={`${GITHUB_REPO}/blob/main/LICENSE-DATA`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t.footer.data}: {DATA_LICENSE}
+          </a>
+          <a href={`${GITHUB_REPO}/blob/main/docs/DATA.md`} target="_blank" rel="noopener noreferrer">
+            docs/DATA.md
+          </a>
+          <a href={withBase("/api/games.json")}>API JSON</a>
+          <a href={withBase("/llms.txt")}>llms.txt</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© {year} {SITE_NAME}</span>
+      <span class="inline-flex items-center gap-1.5">
+        {t.footer.madeWith}
+        <Icon name="sparkles" size={13} />
+      </span>
+    </div>
+  </div>
+</footer>

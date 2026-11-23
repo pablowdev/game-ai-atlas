@@ -1,0 +1,25 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: jackhopkins-factorio-learning-environment
+name: Factorio Learning Environment
+repo: JackHopkins/factorio-learning-environment
+homepage: https://jackhopkins.github.io/factorio-learning-environment/
+games:
+  - factorio
+game_scope: specific
+relation: environment
+ai_role: research
+tech:
+  - llm
+  - reinforcement-learning
+description_es: Entorno abierto para evaluar LLMs y agentes en Factorio.
+description_en: Open-ended environment for evaluating LLMs and agents in Factorio.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+tags:
+  - automation
+  - llm
+  - research
+review_status: approved

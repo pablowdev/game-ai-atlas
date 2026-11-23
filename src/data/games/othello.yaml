@@ -1,0 +1,16 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: othello
+title: Othello
+aliases:
+  - Reversi
+year: 1883
+platforms:
+  - Tablero
+  - PC
+genres:
+  - Tablero
+  - Estrategia
+description_es: Juego de tablero de reversi, usado en implementaciones de AlphaZero y OpenSpiel.
+description_en: Reversi board game used in AlphaZero and OpenSpiel implementations.

@@ -1,0 +1,23 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: kautenja-gym-super-mario-bros
+name: gym-super-mario-bros
+repo: Kautenja/gym-super-mario-bros
+games:
+  - super-mario-bros
+game_scope: specific
+relation: environment
+ai_role: research
+tech:
+  - reinforcement-learning
+description_es: Entornos Gymnasium para juegos de Mario de NES, con recompensas y metadatos de tareas.
+description_en: Gymnasium environments for NES Mario games, with rewards and task metadata.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: MIT
+tags:
+  - platformer
+  - nes
+review_status: approved

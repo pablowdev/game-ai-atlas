@@ -1,0 +1,22 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: rolv-arild-necto
+name: Necto
+repo: Rolv-Arild/Necto
+games:
+  - rocket-league
+game_scope: specific
+relation: agent
+ai_role: research
+tech:
+  - reinforcement-learning
+description_es: Bot de Rocket League entrenado con RL, conocido por su rendimiento competitivo.
+description_en: RL-trained Rocket League bot known for its competitive performance.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+tags:
+  - sports
+  - bot
+review_status: approved

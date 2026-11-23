@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Guía de contribución
+    url: https://github.com/pabwass/game-ai-atlas/blob/main/CONTRIBUTING.md
+    about: Lee los criterios y el formato antes de abrir un issue.
+  - name: Esquema de datos
+    url: https://github.com/pabwass/game-ai-atlas/blob/main/docs/DATA.md
+    about: Consulta los campos obligatorios y opcionales.
+  - name: Taxonomía
+    url: https://github.com/pabwass/game-ai-atlas/blob/main/docs/TAXONOMY.md
+    about: Cómo clasificamos agentes, clones, mods, entornos y herramientas.

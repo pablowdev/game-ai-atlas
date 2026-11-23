@@ -1,0 +1,16 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: zork
+title: Zork
+aliases:
+  - Zork I
+year: 1977
+platforms:
+  - PC
+genres:
+  - Aventura de texto
+developers:
+  - Infocom
+description_es: Aventura conversacional clásica, usada para investigar agentes de texto.
+description_en: Classic text adventure used to research text agents.

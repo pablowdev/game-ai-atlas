@@ -1,0 +1,17 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: hearthstone
+title: Hearthstone
+aliases:
+  - Hearthstone
+year: 2014
+platforms:
+  - PC
+  - Móvil
+genres:
+  - Cartas coleccionables
+developers:
+  - Blizzard Entertainment
+description_es: Juego de cartas coleccionables de Blizzard, con bots de MCTS y redes neuronales.
+description_en: Blizzard collectible card game with MCTS and neural-network bots.

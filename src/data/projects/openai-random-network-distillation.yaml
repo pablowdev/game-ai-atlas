@@ -1,0 +1,24 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: openai-random-network-distillation
+name: Random Network Distillation
+repo: openai/random-network-distillation
+games:
+  - montezumas-revenge
+game_scope: specific
+relation: agent
+ai_role: research
+tech:
+  - reinforcement-learning
+  - exploration
+description_es: Código de exploración por destilación de redes aleatorias, evaluado en Montezuma's Revenge.
+description_en: Random network distillation exploration code, evaluated on Montezuma's Revenge.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+tags:
+  - atari
+  - exploration
+  - research
+review_status: approved

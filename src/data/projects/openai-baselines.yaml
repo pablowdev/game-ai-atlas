@@ -1,0 +1,32 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: openai-baselines
+name: OpenAI Baselines
+repo: openai/baselines
+homepage: https://github.com/openai/baselines
+games:
+  - breakout
+  - pong
+  - space-invaders
+  - pac-man
+  - montezumas-revenge
+  - pitfall
+  - adventure
+game_scope: multi
+relation: tool
+ai_role: research
+tech:
+  - reinforcement-learning
+  - deep-learning
+description_es: Implementaciones de referencia de algoritmos de RL de OpenAI, con ejemplos de Atari.
+description_en: OpenAI's reference implementations of RL algorithms, with Atari examples.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: MIT
+tags:
+  - atari
+  - library
+  - legacy
+review_status: approved

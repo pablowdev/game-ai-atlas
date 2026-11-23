@@ -1,0 +1,17 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: dou-dizhu
+title: Dou Dizhu
+aliases:
+  - Fight the Landlord
+  - 斗地主
+year: null
+platforms:
+  - Cartas
+  - PC
+genres:
+  - Cartas
+  - Información imperfecta
+description_es: Juego de cartas chino de información imperfecta, popular en RL.
+description_en: Chinese imperfect-information card game popular in RL.

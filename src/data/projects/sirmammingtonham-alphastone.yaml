@@ -1,0 +1,25 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: sirmammingtonham-alphastone
+name: AlphaStone
+repo: sirmammingtonham/alphastone
+games:
+  - hearthstone
+game_scope: specific
+relation: agent
+ai_role: research
+tech:
+  - mcts
+  - neural-network
+  - self-play
+description_es: Agente de Hearthstone con self-play, MCTS y una red neuronal profunda.
+description_en: Hearthstone agent with self-play, MCTS, and a deep neural network.
+requires_original_game: false
+uses_original_assets: true
+playable_in_browser: false
+license: Unlicense
+tags:
+  - cards
+  - research
+review_status: approved

@@ -1,0 +1,23 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: jjyg-df-ai
+name: df-ai
+repo: jjyg/df-ai
+games:
+  - dwarf-fortress
+game_scope: specific
+relation: agent
+ai_role: runtime
+tech:
+  - classical-ai
+  - planning
+description_es: Script de IA que automatiza la gestión de una fortaleza en Dwarf Fortress.
+description_en: AI script that automates fortress management in Dwarf Fortress.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+tags:
+  - simulation
+  - automation
+review_status: approved

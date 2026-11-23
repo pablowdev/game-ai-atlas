@@ -1,0 +1,19 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: street-fighter-iii-3rd-strike
+title: "Street Fighter III: 3rd Strike"
+aliases:
+  - 3rd Strike
+  - SFIII
+year: 1999
+platforms:
+  - Arcade
+  - Consolas
+genres:
+  - Lucha
+series: Street Fighter
+developers:
+  - Capcom
+description_es: Juego de lucha arcade, incluido en plataformas de RL para experimentación.
+description_en: Arcade fighting game included in RL platforms for experimentation.

@@ -1,0 +1,26 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: opendilab-di-star
+name: DI-star
+repo: opendilab/DI-star
+homepage: https://opendilab.github.io/DI-star/
+games:
+  - starcraft-ii
+game_scope: specific
+relation: agent
+ai_role: research
+tech:
+  - reinforcement-learning
+  - self-play
+  - multi-agent
+description_es: Plataforma de entrenamiento distribuido e imitación de AlphaStar para StarCraft II.
+description_en: Distributed training platform and AlphaStar-like agent for StarCraft II.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: Apache-2.0
+tags:
+  - rts
+  - alphastar
+review_status: approved

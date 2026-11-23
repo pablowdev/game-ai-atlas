@@ -1,0 +1,16 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: nethack
+title: NetHack
+aliases:
+  - NetHack
+year: 1987
+platforms:
+  - PC
+genres:
+  - Roguelike
+developers:
+  - NetHack team
+description_es: Roguelike de mazmorras con una complejidad extrema, base del NetHack Learning Environment.
+description_en: Extremely complex dungeon roguelike, basis of the NetHack Learning Environment.

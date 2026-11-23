@@ -1,0 +1,87 @@
+---
+import Icon from "./Icon.astro";
+import LanguageSwitch from "./LanguageSwitch.astro";
+import { GITHUB_REPO, SITE_NAME } from "../config";
+import { routes } from "../i18n/routes";
+import type { Lang } from "../i18n/types";
+import { ui } from "../i18n/ui";
+import { withBase } from "../lib/url";
+
+interface Props {
+  lang: Lang;
+  alternatePath: string;
+}
+
+const { lang, alternatePath } = Astro.props;
+const t = ui[lang];
+const path = Astro.url.pathname;
+
+const items = [
+  { href: routes.games[lang], label: t.nav.games, key: "games" },
+  { href: routes.tools[lang], label: t.nav.tools, key: "tools" },
+  { href: routes.contribute[lang], label: t.nav.contribute, key: "contribute" },
+  { href: routes.about[lang], label: t.nav.about, key: "about" }
+] as const;
+
+const isCurrent = (href: string) => {
+  const target = withBase(href);
+  return target === withBase("/")
+    ? path === target
+    : path === target || path.startsWith(target);
+};
+
+const homeHref = withBase(routes.home[lang]);
+---
+
+<header class="site-header">
+  <div class="container-page">
+    <div class="site-header-inner">
+      <a class="brand" href={homeHref} aria-label={`${SITE_NAME} · ${t.common.home}`}>
+        <span class="brand-mark"><Icon name="logo" size={18} /></span>
+        <span>{SITE_NAME}</span>
+      </a>
+
+      <nav class="nav-links desktop-nav" aria-label={t.nav.main}>
+        {
+          items.map((item) => (
+            <a
+              class="nav-link"
+              href={withBase(item.href)}
+              aria-current={isCurrent(item.href) ? "page" : undefined}
+            >
+              {item.label}
+            </a>
+          ))
+        }
+      </nav>
+
+      <div class="header-actions">
+        <LanguageSwitch lang={lang} alternatePath={alternatePath} />
+        <a
+          class="btn btn-sm"
+          href={GITHUB_REPO}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${SITE_NAME} · GitHub`}
+        >
+          <Icon name="github" size={15} />
+          <span class="hidden sm:inline">{t.nav.github}</span>
+        </a>
+      </div>
+    </div>
+
+    <nav class="mobile-nav" aria-label={t.nav.main}>
+      {
+        items.map((item) => (
+          <a
+            class="nav-link"
+            href={withBase(item.href)}
+            aria-current={isCurrent(item.href) ? "page" : undefined}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,16 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: montezumas-revenge
+title: Montezuma's Revenge
+aliases:
+  - Montezuma
+year: 1984
+platforms:
+  - Atari 2600
+genres:
+  - Plataformas
+developers:
+  - Parker Brothers
+description_es: Plataformas de Atari famoso por su exploración difícil y recompensas dispersas.
+description_en: Atari platformer famous for difficult exploration and sparse rewards.

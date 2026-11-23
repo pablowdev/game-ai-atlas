@@ -1,0 +1,35 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: google-deepmind-open-spiel
+name: OpenSpiel
+repo: google-deepmind/open_spiel
+homepage: https://openspiel.readthedocs.io/
+games:
+  - chess
+  - go
+  - poker
+  - othello
+  - connect-four
+  - tic-tac-toe
+game_scope: multi
+relation: tool
+ai_role: research
+tech:
+  - reinforcement-learning
+  - mcts
+  - game-theory
+description_es: Colección de entornos y algoritmos para investigación en juegos y RL.
+description_en: Collection of environments and algorithms for game and RL research.
+requires_original_game: false
+uses_original_assets: false
+playable_in_browser: false
+license: Apache-2.0
+links:
+  docs: https://openspiel.readthedocs.io/
+  paper: https://arxiv.org/abs/1908.09453
+tags:
+  - framework
+  - board
+  - cards
+review_status: approved

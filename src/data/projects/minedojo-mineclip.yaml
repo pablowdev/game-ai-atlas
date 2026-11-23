@@ -1,0 +1,24 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: minedojo-mineclip
+name: MineCLIP
+repo: MineDojo/MineCLIP
+games:
+  - minecraft
+game_scope: specific
+relation: tool
+ai_role: research
+tech:
+  - multimodal
+  - contrastive-learning
+description_es: Modelo de representación video-texto para tareas abiertas en Minecraft.
+description_en: Video-text representation model for open-ended tasks in Minecraft.
+requires_original_game: false
+uses_original_assets: false
+playable_in_browser: false
+license: MIT
+tags:
+  - sandbox
+  - foundation-model
+review_status: approved

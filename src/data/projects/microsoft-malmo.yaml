@@ -1,0 +1,24 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: microsoft-malmo
+name: Project Malmo
+repo: microsoft/malmo
+games:
+  - minecraft
+game_scope: specific
+relation: environment
+ai_role: research
+tech:
+  - reinforcement-learning
+description_es: Plataforma de Microsoft para experimentar con IA en Minecraft; archivada pero histórica.
+description_en: Microsoft's platform for AI experimentation in Minecraft; archived but historically important.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: MIT
+tags:
+  - sandbox
+  - research
+  - legacy
+review_status: approved

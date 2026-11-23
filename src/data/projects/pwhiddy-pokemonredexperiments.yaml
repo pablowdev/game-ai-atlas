@@ -1,0 +1,24 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: pwhiddy-pokemonredexperiments
+name: PokemonRedExperiments
+repo: PWhiddy/PokemonRedExperiments
+games:
+  - pokemon-red
+game_scope: specific
+relation: agent
+ai_role: research
+tech:
+  - reinforcement-learning
+description_es: Agente de RL que aprende a jugar Pokémon Red desde la pantalla, con experimentos y visualizaciones.
+description_en: RL agent that learns to play Pokémon Red from the screen, with experiments and visualizations.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: MIT
+tags:
+  - rpg
+  - gameboy
+  - research
+review_status: approved

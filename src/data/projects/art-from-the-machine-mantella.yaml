@@ -1,0 +1,29 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: art-from-the-machine-mantella
+name: Mantella
+repo: art-from-the-machine/Mantella
+homepage: https://art-from-the-machine.github.io/Mantella/
+games:
+  - skyrim
+game_scope: specific
+relation: mod
+ai_role: runtime
+tech:
+  - llm
+  - speech
+description_es: Mod de Skyrim que permite hablar con NPCs usando STT, LLM y TTS.
+description_en: Skyrim mod that lets you talk to NPCs using STT, LLM, and TTS.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: AGPL-3.0
+links:
+  docs: https://art-from-the-machine.github.io/Mantella/
+tags:
+  - rpg
+  - mod
+  - llm
+  - voice
+review_status: approved

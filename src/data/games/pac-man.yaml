@@ -1,0 +1,17 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: pac-man
+title: Pac-Man
+aliases:
+  - Pacman
+year: 1980
+platforms:
+  - Arcade
+  - Atari 2600
+genres:
+  - Laberinto
+developers:
+  - Namco
+description_es: Laberinto y fantasmas, un clásico de la IA de juegos y del RL.
+description_en: Maze-and-ghosts classic of game AI and reinforcement learning.

@@ -1,0 +1,17 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: rimworld
+title: RimWorld
+aliases:
+  - RimWorld
+year: 2018
+platforms:
+  - PC
+genres:
+  - Simulación
+  - Colonias
+developers:
+  - Ludeon Studios
+description_es: Simulación de colonias y narrativa emergente, con mods y frameworks de IA.
+description_en: Colony simulation with emergent narrative, AI mods, and frameworks.

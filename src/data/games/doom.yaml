@@ -1,0 +1,19 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: doom
+title: Doom
+aliases:
+  - DOOM
+  - Doom 1993
+year: 1993
+platforms:
+  - PC
+genres:
+  - FPS
+series: Doom
+developers:
+  - id Software
+description_es: Shooter en primera persona que popularizó el género y se convirtió en un entorno clásico para la investigación en IA.
+description_en: First-person shooter that popularized the genre and became a classic environment for AI research.
+featured: true

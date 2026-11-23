@@ -1,0 +1,17 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: mahjong
+title: Mahjong
+aliases:
+  - Riichi Mahjong
+  - Mahjong Soul
+year: null
+platforms:
+  - Fichas
+  - PC
+genres:
+  - Tablero
+  - Información imperfecta
+description_es: Juego de fichas de información imperfecta, con IA competitiva en riichi mahjong.
+description_en: Imperfect-information tile game with competitive riichi mahjong AI.

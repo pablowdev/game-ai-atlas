@@ -1,0 +1,22 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: minecraft
+title: Minecraft
+aliases:
+  - Minecraft Java Edition
+year: 2011
+platforms:
+  - PC
+  - Mac
+  - Linux
+  - Consolas
+  - Móvil
+genres:
+  - Sandbox
+  - Supervivencia
+developers:
+  - Mojang Studios
+description_es: Sandbox de construcción y supervivencia en un mundo de bloques, muy usado para agentes abiertos y aprendizaje por refuerzo.
+description_en: Block-building survival sandbox widely used for open-ended agents and reinforcement learning.
+featured: true

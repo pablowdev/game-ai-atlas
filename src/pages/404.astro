@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "../components/Icon.astro";
+import { withBase } from "../lib/url";
+---
+
+<BaseLayout
+  lang="es"
+  title="404"
+  description="Página no encontrada / Page not found"
+  canonicalPath="/404.html"
+  alternatePath="/en/"
+  noindex
+>
+  <section class="container-page detail-hero">
+    <p class="hero-eyebrow">404</p>
+    <h1 class="detail-title">Esta página no existe.</h1>
+    <p class="detail-subtitle">
+      This page does not exist. Puede que el enlace haya cambiado o que el
+      proyecto ya no esté disponible.
+    </p>
+    <div class="mt-6 flex flex-wrap gap-2">
+      <a class="btn btn-primary" href={withBase("/es/")}>
+        <Icon name="arrowRight" size={14} />
+        Ir al inicio
+      </a>
+      <a class="btn" href={withBase("/en/")}>
+        Go home
+        <Icon name="arrowRight" size={14} />
+      </a>
+      <a class="btn" href={withBase("/es/juegos/")}>
+        Ver juegos
+      </a>
+    </div>
+  </section>
+</BaseLayout>

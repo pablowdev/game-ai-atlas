@@ -1,0 +1,17 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: space-invaders
+title: Space Invaders
+aliases:
+  - Space Invaders
+year: 1978
+platforms:
+  - Arcade
+  - Atari 2600
+genres:
+  - Shooter
+developers:
+  - Taito
+description_es: Arcade de disparos, parte del conjunto clásico de Atari para RL.
+description_en: Shooting arcade game, part of the classic Atari RL suite.

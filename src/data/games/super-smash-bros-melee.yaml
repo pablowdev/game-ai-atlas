@@ -1,0 +1,18 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: super-smash-bros-melee
+title: Super Smash Bros. Melee
+aliases:
+  - Melee
+  - SSBM
+year: 2001
+platforms:
+  - GameCube
+genres:
+  - Lucha
+series: Super Smash Bros.
+developers:
+  - HAL Laboratory
+description_es: Juego de lucha de GameCube con una escena competitiva y APIs para agentes.
+description_en: GameCube fighting game with a competitive scene and APIs for agents.

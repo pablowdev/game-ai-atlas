@@ -1,0 +1,28 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: microsoft-jericho
+name: Jericho
+repo: microsoft/jericho
+homepage: https://microsoft.github.io/jericho/
+games:
+  - zork
+game_scope: specific
+relation: environment
+ai_role: research
+tech:
+  - reinforcement-learning
+  - nlp
+description_es: Entorno de aprendizaje para juegos de ficción interactiva y aventuras de texto.
+description_en: Learning environment for interactive fiction and text adventure games.
+requires_original_game: false
+uses_original_assets: false
+playable_in_browser: false
+license: GPL-2.0
+links:
+  docs: https://microsoft.github.io/jericho/
+  paper: https://arxiv.org/abs/1909.05398
+tags:
+  - text
+  - research
+review_status: approved

@@ -1,0 +1,25 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: arnaudstiegler-gamengen-repro
+name: GameNGen repro
+repo: arnaudstiegler/gameNgen-repro
+games:
+  - doom
+game_scope: specific
+relation: world-model
+ai_role: research
+tech:
+  - diffusion
+  - world-model
+description_es: Implementación open source de GameNGen, un motor de juego neuronal basado en difusión para Doom.
+description_en: Open-source implementation of GameNGen, a diffusion-based neural game engine for Doom.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: Apache-2.0
+tags:
+  - fps
+  - diffusion
+  - world-model
+review_status: approved

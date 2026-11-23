@@ -1,0 +1,27 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: altf4-libmelee
+name: libmelee
+repo: altf4/libmelee
+homepage: https://libmelee.readthedocs.io/
+games:
+  - super-smash-bros-melee
+game_scope: specific
+relation: tool
+ai_role: research
+tech:
+  - bot-api
+description_es: API de Python para crear agentes que juegan a Super Smash Bros. Melee; archivada.
+description_en: Python API for building agents that play Super Smash Bros. Melee; archived.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: LGPL-3.0
+links:
+  docs: https://libmelee.readthedocs.io/
+tags:
+  - fighting
+  - api
+  - legacy
+review_status: approved

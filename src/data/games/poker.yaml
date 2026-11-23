@@ -1,0 +1,18 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: poker
+title: Poker
+aliases:
+  - Texas Hold'em
+  - Póker
+  - Poker
+year: 1829
+platforms:
+  - Cartas
+  - PC
+genres:
+  - Cartas
+  - Información imperfecta
+description_es: Juego de cartas de información imperfecta, con investigación en teoría de juegos y RL.
+description_en: Imperfect-information card game with game-theory and reinforcement learning research.

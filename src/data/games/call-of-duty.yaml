@@ -1,0 +1,18 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: call-of-duty
+title: Call of Duty
+aliases:
+  - CoD
+year: 2003
+platforms:
+  - PC
+  - Consolas
+genres:
+  - FPS
+series: Call of Duty
+developers:
+  - Infinity Ward
+description_es: Shooter militar en primera persona, inspiración de remakes generados con IA.
+description_en: Military first-person shooter, inspiration for AI-generated remakes.

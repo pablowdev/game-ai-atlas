@@ -1,0 +1,24 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: bwapi-bwapi
+name: BWAPI
+repo: bwapi/bwapi
+homepage: https://bwapi.github.io/
+games:
+  - starcraft-brood-war
+game_scope: specific
+relation: environment
+ai_role: research
+tech:
+  - bot-api
+description_es: "API para crear bots que juegan a StarCraft: Brood War."
+description_en: "API for building bots that play StarCraft: Brood War."
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: LGPL-3.0
+tags:
+  - rts
+  - api
+review_status: approved

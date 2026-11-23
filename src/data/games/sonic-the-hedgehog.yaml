@@ -1,0 +1,18 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: sonic-the-hedgehog
+title: Sonic the Hedgehog
+aliases:
+  - Sonic
+year: 1991
+platforms:
+  - Genesis
+  - Master System
+genres:
+  - Plataformas
+series: Sonic
+developers:
+  - Sega
+description_es: Plataformas de velocidad de Sega, con experimentos de RL y ports.
+description_en: Sega speed platformer with RL experiments and ports.

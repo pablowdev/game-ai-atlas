@@ -1,0 +1,17 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: super-mario-64
+title: Super Mario 64
+aliases:
+  - SM64
+year: 1996
+platforms:
+  - N64
+genres:
+  - Plataformas
+series: Super Mario
+developers:
+  - Nintendo
+description_es: Plataformas 3D de Nintendo, objeto de estudio para agentes y ports.
+description_en: Nintendo 3D platformer studied by agents and ports.

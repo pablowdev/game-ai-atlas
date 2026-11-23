@@ -1,0 +1,28 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: diambra-arena
+name: DIAMBRA Arena
+repo: diambra/arena
+homepage: https://diambra.ai/
+games:
+  - street-fighter-iii-3rd-strike
+  - tekken-tag-tournament
+  - ultimate-mortal-kombat-3
+game_scope: multi
+relation: environment
+ai_role: research
+tech:
+  - reinforcement-learning
+description_es: Plataforma de entornos de RL para juegos de lucha arcade.
+description_en: RL environment platform for arcade fighting games.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+links:
+  docs: https://docs.diambra.ai/
+tags:
+  - fighting
+  - research
+  - arcade
+review_status: approved

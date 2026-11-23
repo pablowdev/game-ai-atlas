@@ -1,0 +1,25 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: fatelessai-skyrimnet-gameplugin
+name: SkyrimNet
+repo: FatelessAI/SkyrimNet-GamePlugin
+games:
+  - skyrim
+game_scope: specific
+relation: mod
+ai_role: runtime
+tech:
+  - llm
+  - speech
+description_es: Mod de Skyrim con NPCs que hablan, recuerdan, reaccionan y actúan con IA en tiempo real.
+description_en: Skyrim mod with NPCs that talk, remember, react, and act using AI in real time.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+tags:
+  - rpg
+  - mod
+  - llm
+  - voice
+review_status: approved

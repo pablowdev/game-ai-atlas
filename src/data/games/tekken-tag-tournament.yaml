@@ -1,0 +1,18 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: tekken-tag-tournament
+title: Tekken Tag Tournament
+aliases:
+  - Tekken Tag
+year: 1999
+platforms:
+  - Arcade
+  - PS2
+genres:
+  - Lucha
+series: Tekken
+developers:
+  - Namco
+description_es: Juego de lucha 3D incluido en DIAMBRA Arena para RL.
+description_en: 3D fighting game included in DIAMBRA Arena for RL.

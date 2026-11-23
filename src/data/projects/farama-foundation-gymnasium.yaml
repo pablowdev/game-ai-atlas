@@ -1,0 +1,25 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: farama-foundation-gymnasium
+name: Gymnasium
+repo: Farama-Foundation/Gymnasium
+homepage: https://gymnasium.farama.org/
+games: []
+game_scope: general
+relation: tool
+ai_role: research
+tech:
+  - reinforcement-learning
+description_es: API estándar para entornos de RL de un solo agente, sucesora de Gym.
+description_en: Standard API for single-agent RL environments, successor to Gym.
+requires_original_game: false
+uses_original_assets: false
+playable_in_browser: false
+license: MIT
+links:
+  docs: https://gymnasium.farama.org/
+tags:
+  - framework
+  - rl
+review_status: approved

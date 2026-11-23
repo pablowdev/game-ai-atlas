@@ -1,0 +1,16 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: flappy-bird
+title: Flappy Bird
+aliases:
+  - FlappyBird
+year: 2013
+platforms:
+  - Móvil
+genres:
+  - Arcade
+developers:
+  - Dong Nguyen
+description_es: Juego móvil de vuelo y precisión, popularizado como reto de Deep Q-Learning.
+description_en: Mobile precision-flying game popularized as a Deep Q-Learning challenge.

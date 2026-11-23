@@ -1,0 +1,23 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: torchcraft-torchcraft
+name: TorchCraft
+repo: TorchCraft/TorchCraft
+games:
+  - starcraft-brood-war
+game_scope: specific
+relation: environment
+ai_role: research
+tech:
+  - reinforcement-learning
+  - torch
+description_es: "Puente entre Torch y StarCraft: Brood War para investigación en IA; archivado."
+description_en: "Bridge between Torch and StarCraft: Brood War for AI research; archived."
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+tags:
+  - rts
+  - legacy
+review_status: approved

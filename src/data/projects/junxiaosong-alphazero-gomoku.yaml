@@ -1,0 +1,25 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: junxiaosong-alphazero-gomoku
+name: AlphaZero Gomoku
+repo: junxiaosong/AlphaZero_Gomoku
+games:
+  - gomoku
+game_scope: specific
+relation: agent
+ai_role: research
+tech:
+  - reinforcement-learning
+  - mcts
+  - self-play
+description_es: Implementación de AlphaZero para Gomoku (cinco en línea).
+description_en: AlphaZero implementation for Gomoku (five in a row).
+requires_original_game: false
+uses_original_assets: false
+playable_in_browser: false
+license: MIT
+tags:
+  - board
+  - alphazero
+review_status: approved

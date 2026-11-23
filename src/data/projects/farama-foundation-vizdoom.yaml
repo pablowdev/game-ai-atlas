@@ -1,0 +1,28 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: farama-foundation-vizdoom
+name: ViZDoom
+repo: Farama-Foundation/ViZDoom
+homepage: https://vizdoom.farama.org/
+games:
+  - doom
+game_scope: specific
+relation: environment
+ai_role: research
+tech:
+  - reinforcement-learning
+description_es: Entornos de aprendizaje por refuerzo para crear bots que juegan a Doom usando solo los píxeles de la pantalla.
+description_en: Reinforcement learning environments for building bots that play Doom using only screen pixels.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: MIT
+links:
+  docs: https://vizdoom.farama.org/
+  paper: https://arxiv.org/abs/1605.02059
+tags:
+  - fps
+  - research
+  - benchmark
+review_status: approved

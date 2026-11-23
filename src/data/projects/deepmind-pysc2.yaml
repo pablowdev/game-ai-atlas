@@ -1,0 +1,25 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: deepmind-pysc2
+name: PySC2
+repo: google-deepmind/pysc2
+games:
+  - starcraft-ii
+game_scope: specific
+relation: environment
+ai_role: research
+tech:
+  - reinforcement-learning
+description_es: Entorno de aprendizaje para StarCraft II desarrollado por DeepMind.
+description_en: Learning environment for StarCraft II developed by DeepMind.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: Apache-2.0
+links:
+  paper: https://arxiv.org/abs/1708.04782
+tags:
+  - rts
+  - research
+review_status: approved

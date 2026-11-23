@@ -1,0 +1,23 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: ugo-nama-kun-gym-torcs
+name: gym-torcs
+repo: ugo-nama-kun/gym_torcs
+games:
+  - torcs
+game_scope: specific
+relation: environment
+ai_role: research
+tech:
+  - reinforcement-learning
+description_es: Entorno Gym para el simulador de carreras TORCS.
+description_en: Gym environment for the TORCS racing simulator.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: MIT
+tags:
+  - racing
+  - research
+review_status: approved

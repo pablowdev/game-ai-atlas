@@ -1,0 +1,17 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: dwarf-fortress
+title: Dwarf Fortress
+aliases:
+  - DF
+year: 2006
+platforms:
+  - PC
+genres:
+  - Simulación
+  - Roguelike
+developers:
+  - Bay 12 Games
+description_es: Simulación de colonias y fantasía, con proyectos de agentes que automatizan la gestión.
+description_en: Colony simulation and fantasy game with agent projects that automate management.

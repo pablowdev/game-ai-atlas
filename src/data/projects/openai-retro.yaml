@@ -1,0 +1,29 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: openai-retro
+name: Retro
+repo: openai/retro
+homepage: https://retro.readthedocs.io/
+games:
+  - super-mario-bros
+  - sonic-the-hedgehog
+game_scope: multi
+relation: environment
+ai_role: research
+tech:
+  - reinforcement-learning
+description_es: Entornos de Gym para juegos retro de NES, SNES, Genesis y Atari, con integración de ROMs.
+description_en: Gym environments for retro NES, SNES, Genesis, and Atari games, with ROM integration.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: MIT
+links:
+  docs: https://retro.readthedocs.io/
+tags:
+  - retro
+  - nes
+  - sega
+  - atari
+review_status: approved

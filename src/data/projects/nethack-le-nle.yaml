@@ -1,0 +1,26 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: nethack-le-nle
+name: NetHack Learning Environment
+repo: NetHack-LE/nle
+homepage: https://nethack-le.readthedocs.io/
+games:
+  - nethack
+game_scope: specific
+relation: environment
+ai_role: research
+tech:
+  - reinforcement-learning
+description_es: Entorno de aprendizaje por refuerzo para NetHack.
+description_en: Reinforcement learning environment for NetHack.
+requires_original_game: false
+uses_original_assets: true
+playable_in_browser: false
+links:
+  docs: https://nethack-le.readthedocs.io/
+  paper: https://arxiv.org/abs/2006.13760
+tags:
+  - roguelike
+  - research
+review_status: approved

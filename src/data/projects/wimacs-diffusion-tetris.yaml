@@ -1,0 +1,25 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: wimacs-diffusion-tetris
+name: Diffusion Tetris
+repo: Wimacs/diffusion_tetris
+games:
+  - tetris
+game_scope: specific
+relation: world-model
+ai_role: research
+tech:
+  - diffusion
+  - world-model
+description_es: Modelo de difusión estilo GameNGen que genera frames jugables de Tetris.
+description_en: GameNGen-style diffusion model that generates playable Tetris frames.
+requires_original_game: false
+uses_original_assets: false
+playable_in_browser: false
+license: MIT
+tags:
+  - puzzle
+  - diffusion
+  - world-model
+review_status: approved

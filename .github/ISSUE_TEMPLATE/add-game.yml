@@ -1,0 +1,85 @@
+name: Añadir juego
+description: Propón un juego que todavía no esté en el atlas.
+title: "[Juego] "
+labels: ["data", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Los juegos sin proyectos también son bienvenidos: sirven para mostrar huecos de cobertura y animar a contribuir.
+
+  - type: input
+    id: title
+    attributes:
+      label: Título
+      placeholder: Doom
+    validations:
+      required: true
+
+  - type: input
+    id: aliases
+    attributes:
+      label: Alias
+      description: Otros títulos, nombres en español, abreviaturas. Sepáralos con comas.
+      placeholder: DOOM, Doom 1993
+
+  - type: input
+    id: year
+    attributes:
+      label: Año
+      placeholder: "1993"
+
+  - type: input
+    id: platforms
+    attributes:
+      label: Plataformas
+      description: Sepáralas con comas.
+      placeholder: PC, NES, Game Boy, Web, Tablero, Cartas
+
+  - type: input
+    id: genres
+    attributes:
+      label: Géneros
+      description: Sepáralos con comas.
+      placeholder: FPS, RPG, Puzle, Estrategia
+
+  - type: input
+    id: series
+    attributes:
+      label: Saga
+      placeholder: Doom
+
+  - type: input
+    id: developers
+    attributes:
+      label: Desarrolladores
+      description: Sepáralos con comas.
+      placeholder: id Software
+
+  - type: textarea
+    id: description_es
+    attributes:
+      label: Descripción breve en español
+      maxlength: 300
+    validations:
+      required: true
+
+  - type: textarea
+    id: description_en
+    attributes:
+      label: Short description in English
+      maxlength: 300
+    validations:
+      required: true
+
+  - type: input
+    id: external_id
+    attributes:
+      label: Wikidata o IGDB
+      description: Enlace o identificador, si lo tienes.
+      placeholder: https://www.wikidata.org/wiki/Q189960
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notas adicionales

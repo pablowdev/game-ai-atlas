@@ -1,0 +1,16 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: pitfall
+title: Pitfall!
+aliases:
+  - Pitfall
+year: 1982
+platforms:
+  - Atari 2600
+genres:
+  - Plataformas
+developers:
+  - Activision
+description_es: Plataformas de Atari con exploración y planificación, usado en benchmarks.
+description_en: Atari platformer with exploration and planning, used in benchmarks.

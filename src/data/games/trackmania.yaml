@@ -1,0 +1,16 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: trackmania
+title: Trackmania
+aliases:
+  - TrackMania
+year: 2003
+platforms:
+  - PC
+genres:
+  - Carreras
+developers:
+  - Nadeo
+description_es: Juego de carreras de precisión, usado para RL en tiempo real.
+description_en: Precision racing game used for real-time reinforcement learning.

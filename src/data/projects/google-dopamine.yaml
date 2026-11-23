@@ -1,0 +1,30 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: google-dopamine
+name: Dopamine
+repo: google/dopamine
+games:
+  - breakout
+  - pong
+  - space-invaders
+  - pac-man
+  - montezumas-revenge
+  - pitfall
+  - adventure
+game_scope: multi
+relation: tool
+ai_role: research
+tech:
+  - reinforcement-learning
+  - deep-learning
+description_es: Framework de investigación de Google para prototipar algoritmos de RL, con Atari.
+description_en: Google's research framework for prototyping RL algorithms, with Atari.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: Apache-2.0
+tags:
+  - atari
+  - framework
+review_status: approved

@@ -1,0 +1,24 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: openai-gym
+name: OpenAI Gym
+repo: openai/gym
+homepage: https://www.gymlibrary.dev/
+games: []
+game_scope: general
+relation: tool
+ai_role: research
+tech:
+  - reinforcement-learning
+description_es: Toolkit original de OpenAI para desarrollar y comparar algoritmos de RL; archivado.
+description_en: OpenAI's original toolkit for developing and comparing RL algorithms; archived.
+requires_original_game: false
+uses_original_assets: false
+playable_in_browser: false
+links:
+  docs: https://www.gymlibrary.dev/
+tags:
+  - framework
+  - legacy
+review_status: approved

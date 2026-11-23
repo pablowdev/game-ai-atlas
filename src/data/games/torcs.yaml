@@ -1,0 +1,15 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: torcs
+title: TORCS
+aliases:
+  - The Open Racing Car Simulator
+year: 2000
+platforms:
+  - PC
+genres:
+  - Carreras
+  - Simulación
+description_es: Simulador de carreras de código abierto, clásico en la investigación de conducción autónoma.
+description_en: Open-source racing simulator, a classic in autonomous driving research.

@@ -1,0 +1,432 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Badge from "../Badge.astro";
+import GameCard from "../GameCard.astro";
+import Icon from "../Icon.astro";
+import ProjectCard from "../ProjectCard.astro";
+import { routes } from "../../i18n/routes";
+import { otherLang, type Lang } from "../../i18n/types";
+import { ui } from "../../i18n/ui";
+import {
+  aiRoleLabel,
+  aiRoleTones,
+  fidelityLabel,
+  fidelityTones,
+  formatDate,
+  formatNumber,
+  formatRelative,
+  relationLabel,
+  relationTones,
+  scopeLabel,
+  statusLabel,
+  statusTones,
+  techLabel
+} from "../../lib/format";
+import {
+  getData,
+  getProjectGames,
+  getRelatedProjects,
+  type ProjectView
+} from "../../lib/data";
+import { absoluteUrl, withBase } from "../../lib/url";
+
+interface Props {
+  lang: Lang;
+  project: ProjectView;
+}
+
+const { lang, project } = Astro.props;
+const t = ui[lang];
+const data = getData();
+const description =
+  lang === "es" ? project.description_es : project.description_en;
+const canonicalPath = routes.project(lang, project.id);
+const alternatePath = routes.project(otherLang(lang), project.id);
+const games = getProjectGames(project);
+const related = getRelatedProjects(project, 4);
+const activity = formatRelative(project.lastCommitAt, lang);
+const commitDate = formatDate(project.lastCommitAt, lang);
+const metaUpdated = formatDate(data.meta.updatedAt, lang);
+const fidelity = project.fidelity ?? "n/a";
+
+const externalLinks: Array<{
+  label: string;
+  ariaLabel: string;
+  href: string;
+  icon: "github" | "globe" | "external" | "code";
+}> = [
+  {
+    label: t.project.repo,
+    ariaLabel: `${t.project.repo}: ${project.name}`,
+    href: project.repoUrl,
+    icon: "github"
+  }
+];
+
+if (project.homepageUrl) {
+  externalLinks.push({
+    label: t.project.homepage,
+    ariaLabel: `${t.project.homepage}: ${project.name}`,
+    href: project.homepageUrl,
+    icon: "globe"
+  });
+}
+if (project.links?.demo) {
+  externalLinks.push({
+    label: t.project.demo,
+    ariaLabel: `${t.project.demo}: ${project.name}`,
+    href: project.links.demo,
+    icon: "external"
+  });
+}
+if (project.links?.docs) {
+  externalLinks.push({
+    label: t.project.docs,
+    ariaLabel: `${t.project.docs}: ${project.name}`,
+    href: project.links.docs,
+    icon: "code"
+  });
+}
+if (project.links?.paper) {
+  externalLinks.push({
+    label: t.project.paper,
+    ariaLabel: `${t.project.paper}: ${project.name}`,
+    href: project.links.paper,
+    icon: "code"
+  });
+}
+if (project.links?.video) {
+  externalLinks.push({
+    label: t.project.video,
+    ariaLabel: `${t.project.video}: ${project.name}`,
+    href: project.links.video,
+    icon: "external"
+  });
+}
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  name: project.name,
+  description,
+  codeRepository: project.repoUrl,
+  ...(project.license ? { license: project.license } : {}),
+  ...(project.language ? { programmingLanguage: project.language } : {}),
+  ...(project.lastCommitAt ? { dateModified: project.lastCommitAt } : {}),
+  url: absoluteUrl(canonicalPath, Astro.site)
+};
+
+const relationBadge = {
+  label: relationLabel(project.relation, lang),
+  tone: relationTones[project.relation]
+};
+const statusBadge = {
+  label: statusLabel(project.status, lang),
+  tone: statusTones[project.status]
+};
+---
+
+<BaseLayout
+  lang={lang}
+  title={project.name}
+  description={description}
+  canonicalPath={canonicalPath}
+  alternatePath={alternatePath}
+  jsonLd={jsonLd}
+>
+  <section class="container-page detail-hero">
+    <nav class="breadcrumbs" aria-label={t.nav.breadcrumb}>
+      <a href={withBase(routes.home[lang])}>{t.common.home}</a>
+      <Icon name="chevronRight" size={12} />
+      {games.length > 0 ? (
+        <>
+          <a href={withBase(routes.game(lang, games[0].id))}>
+            {games[0].title}
+          </a>
+          <Icon name="chevronRight" size={12} />
+        </>
+      ) : (
+        <>
+          <a href={withBase(routes.tools[lang])}>{t.nav.tools}</a>
+          <Icon name="chevronRight" size={12} />
+        </>
+      )}
+      <span>{project.name}</span>
+    </nav>
+
+    <h1 class="detail-title">{project.name}</h1>
+    <p class="detail-subtitle">{description}</p>
+
+    <div class="detail-meta">
+      <Badge label={relationBadge.label} tone={relationBadge.tone} />
+      <Badge label={statusBadge.label} tone={statusBadge.tone} dot />
+      <Badge
+        label={aiRoleLabel(project.ai_role, lang)}
+        tone={aiRoleTones[project.ai_role]}
+        outline
+      />
+      {project.relation === "clone" && (
+        <Badge
+          label={`${t.project.fidelity}: ${fidelityLabel(fidelity, lang)}`}
+          tone={fidelityTones[fidelity]}
+          outline
+        />
+      )}
+      {project.requires_original_game && (
+        <Badge
+          label={t.badges.requiresOriginal}
+          tone="amber"
+          outline
+        />
+      )}
+      {project.playable_in_browser && (
+        <Badge label={t.badges.browser} tone="emerald" outline />
+      )}
+    </div>
+
+    <div class="mt-5 flex flex-wrap gap-2">
+      <a
+        class="btn btn-primary"
+        href={project.repoUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${t.project.viewOnGithub}: ${project.name}`}
+      >
+        <Icon name="github" size={15} />
+        {t.project.viewOnGithub}
+      </a>
+      {project.homepageUrl && (
+        <a
+          class="btn"
+          href={project.homepageUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${t.project.homepage}: ${project.name}`}
+        >
+          <Icon name="globe" size={14} />
+          {t.project.homepage}
+        </a>
+      )}
+      {project.links?.demo && (
+        <a
+          class="btn"
+          href={project.links.demo}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${t.project.demo}: ${project.name}`}
+        >
+          {t.project.demo}
+          <Icon name="external" size={13} />
+        </a>
+      )}
+    </div>
+  </section>
+
+  <div class="container-page detail-layout">
+    <div>
+      <section class="prose-atlas">
+        <h2>{t.project.about}</h2>
+        <p>{description}</p>
+
+        {project.tech.length > 0 && (
+          <div class="tag-list mt-4">
+            {project.tech.map((tech) => (
+              <span class="tag">{techLabel(tech, lang)}</span>
+            ))}
+          </div>
+        )}
+
+        {project.tags.length > 0 && (
+          <div class="tag-list mt-2">
+            {project.tags.map((tag) => (
+              <span class="tag">#{tag}</span>
+            ))}
+          </div>
+        )}
+      </section>
+
+      <section class="mt-8">
+        <h2 class="section-title">{t.project.links}</h2>
+        <div class="mt-3 grid gap-2 sm:grid-cols-2">
+          {externalLinks.map((link) => (
+            <a
+              class="card flex items-center justify-between gap-3 px-4 py-3 text-sm font-semibold"
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={link.ariaLabel}
+            >
+              <span class="inline-flex items-center gap-2">
+                <Icon name={link.icon} size={15} />
+                {link.label}
+              </span>
+              <Icon name="arrowUpRight" size={14} />
+            </a>
+          ))}
+        </div>
+      </section>
+
+      {related.length > 0 && (
+        <section class="mt-10">
+          <div class="section-head mb-3">
+            <h2 class="section-title">{t.project.related}</h2>
+          </div>
+          <div class="card-grid">
+            {related.map((item) => (
+              <ProjectCard project={item} lang={lang} showGames showTech={false} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {games.length > 0 ? (
+        <section class="mt-10">
+          <div class="section-head mb-3">
+            <h2 class="section-title">{t.project.games}</h2>
+          </div>
+          <div class="card-grid card-grid-3">
+            {games.map((game) => (
+              <GameCard game={game} lang={lang} />
+            ))}
+          </div>
+        </section>
+      ) : (
+        <section class="mt-10">
+          <div class="empty-state text-left">
+            <p class="empty-state-title">{t.tools.general}</p>
+            <p class="empty-state-text">
+              {lang === "es"
+                ? "Esta herramienta funciona con muchos juegos y no está atada a uno solo."
+                : "This tool works across many games and is not tied to a single one."}
+            </p>
+            <div class="empty-state-actions justify-start">
+              <a class="btn" href={withBase(routes.tools[lang])}>
+                {t.nav.tools}
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
+    </div>
+
+    <aside class="detail-aside">
+      <div class="meta-card">
+        <p class="meta-card-title">{t.project.metadata}</p>
+        <div class="meta-list">
+          <div class="meta-list-row">
+            <span class="meta-list-label">{t.project.stars}</span>
+            <span class="meta-list-value">
+              {project.stars != null
+                ? formatNumber(project.stars, lang)
+                : t.common.noData}
+            </span>
+          </div>
+          <div class="meta-list-row">
+            <span class="meta-list-label">{t.project.forks}</span>
+            <span class="meta-list-value">
+              {project.forks != null
+                ? formatNumber(project.forks, lang)
+                : t.common.noData}
+            </span>
+          </div>
+          <div class="meta-list-row">
+            <span class="meta-list-label">{t.project.issues}</span>
+            <span class="meta-list-value">
+              {project.openIssues != null
+                ? formatNumber(project.openIssues, lang)
+                : t.common.noData}
+            </span>
+          </div>
+          <div class="meta-list-row">
+            <span class="meta-list-label">{t.project.language}</span>
+            <span class="meta-list-value">
+              {project.language ?? t.common.noData}
+            </span>
+          </div>
+          <div class="meta-list-row">
+            <span class="meta-list-label">{t.project.license}</span>
+            <span class="meta-list-value">
+              {project.license ?? t.common.noData}
+            </span>
+          </div>
+          <div class="meta-list-row">
+            <span class="meta-list-label">{t.project.lastCommit}</span>
+            <span class="meta-list-value">
+              {commitDate ? (
+                <time datetime={project.lastCommitAt ?? undefined}>
+                  {commitDate}
+                </time>
+              ) : (
+                t.common.noData
+              )}
+            </span>
+          </div>
+          <div class="meta-list-row">
+            <span class="meta-list-label">{t.project.status}</span>
+            <span class="meta-list-value">
+              {statusLabel(project.status, lang)}
+            </span>
+          </div>
+        </div>
+        {activity && (
+          <p class="mt-3 flex items-center gap-1.5 text-xs text-muted">
+            <Icon name="clock" size={12} />
+            {activity}
+          </p>
+        )}
+      </div>
+
+      <div class="meta-card">
+        <p class="meta-card-title">{t.project.classification}</p>
+        <div class="meta-list">
+          <div class="meta-list-row">
+            <span class="meta-list-label">{t.project.aiRole}</span>
+            <span class="meta-list-value">
+              {aiRoleLabel(project.ai_role, lang)}
+            </span>
+          </div>
+          <div class="meta-list-row">
+            <span class="meta-list-label">{t.project.scope}</span>
+            <span class="meta-list-value">
+              {scopeLabel(project.gameScope, lang)}
+            </span>
+          </div>
+          <div class="meta-list-row">
+            <span class="meta-list-label">{t.project.requiresOriginal}</span>
+            <span class="meta-list-value">
+              {project.requires_original_game
+                ? lang === "es"
+                  ? "Sí"
+                  : "Yes"
+                : lang === "es"
+                  ? "No"
+                  : "No"}
+            </span>
+          </div>
+          <div class="meta-list-row">
+            <span class="meta-list-label">{t.project.usesAssets}</span>
+            <span class="meta-list-value">
+              {project.uses_original_assets
+                ? lang === "es"
+                  ? "Sí"
+                  : "Yes"
+                : lang === "es"
+                  ? "No"
+                  : "No"}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meta-card">
+        <p class="meta-card-title">{t.project.lastUpdated}</p>
+        <p class="text-xs leading-relaxed text-muted">
+          {metaUpdated ?? t.project.noData}
+        </p>
+        <p class="mt-2 text-xs leading-relaxed text-muted">
+          {t.project.dataNote}
+        </p>
+      </div>
+    </aside>
+  </div>
+</BaseLayout>

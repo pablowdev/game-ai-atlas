@@ -1,0 +1,19 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: pokemon-showdown
+title: Pokémon Showdown
+aliases:
+  - Pokemon Showdown
+  - PS
+year: 2011
+platforms:
+  - Web
+genres:
+  - Combate por turnos
+  - Competitivo
+series: Pokémon
+developers:
+  - Smogon
+description_es: Simulador competitivo de combates Pokémon, con una API y una comunidad activa de bots.
+description_en: Competitive Pokémon battle simulator with an API and an active bot community.

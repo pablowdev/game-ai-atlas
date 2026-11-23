@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Icon from "../Icon.astro";
+import { GITHUB_REPO } from "../../config";
+import { routes } from "../../i18n/routes";
+import { otherLang, type Lang } from "../../i18n/types";
+import { ui } from "../../i18n/ui";
+import { getData } from "../../lib/data";
+import { formatDate } from "../../lib/format";
+import { withBase } from "../../lib/url";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const data = getData();
+const updated = formatDate(data.stats.updatedAt, lang);
+---
+
+<BaseLayout
+  lang={lang}
+  title={t.about.title}
+  description={t.about.intro}
+  canonicalPath={routes.about[lang]}
+  alternatePath={routes.about[otherLang(lang)]}
+>
+  <section class="container-page detail-hero">
+    <p class="hero-eyebrow">
+      <Icon name="database" size={14} />
+      {t.about.title}
+    </p>
+    <h1 class="detail-title">{t.about.title}</h1>
+    <p class="detail-subtitle">{t.about.intro}</p>
+  </section>
+
+  <section class="container-page section pt-0">
+    <div class="detail-layout">
+      <div class="prose-atlas">
+        <h2>{t.about.scopeTitle}</h2>
+        <ul>
+          {t.about.scope.map((item) => <li>{item}</li>)}
+        </ul>
+
+        <h2>{t.about.taxonomyTitle}</h2>
+        <p>{t.about.taxonomy}</p>
+
+        <h2>{t.about.dataTitle}</h2>
+        <p>{t.about.data}</p>
+
+        <h2>{t.about.updatesTitle}</h2>
+        <p>{t.about.updates}</p>
+        <p>
+          <strong>{t.footer.dataUpdated}:</strong>{" "}
+          {updated ?? (lang === "es" ? "sin fecha" : "no date")}
+        </p>
+
+        <h2>{t.about.legalTitle}</h2>
+        <p>{t.about.legal}</p>
+
+        <h2>{t.about.contributeTitle}</h2>
+        <p>{t.about.contribute}</p>
+        <div class="mt-4 flex flex-wrap gap-2 not-prose">
+          <a class="btn btn-primary" href={withBase(routes.contribute[lang])}>
+            {t.nav.contribute}
+            <Icon name="arrowRight" size={14} />
+          </a>
+          <a
+            class="btn"
+            href={GITHUB_REPO}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${t.siteName} · GitHub`}
+          >
+            <Icon name="github" size={14} />
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <aside class="detail-aside">
+        <div class="meta-card">
+          <p class="meta-card-title">{t.about.dataTitle}</p>
+          <div class="meta-list">
+            <div class="meta-list-row">
+              <span class="meta-list-label">{t.home.statsGames}</span>
+              <span class="meta-list-value">{data.stats.totalGames}</span>
+            </div>
+            <div class="meta-list-row">
+              <span class="meta-list-label">{t.home.statsProjects}</span>
+              <span class="meta-list-value">{data.stats.totalProjects}</span>
+            </div>
+            <div class="meta-list-row">
+              <span class="meta-list-label">{t.home.statsActive}</span>
+              <span class="meta-list-value">{data.stats.activeProjects}</span>
+            </div>
+            <div class="meta-list-row">
+              <span class="meta-list-label">{t.footer.dataUpdated}</span>
+              <span class="meta-list-value">{updated ?? "—"}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="meta-card">
+          <p class="meta-card-title">{t.footer.resources}</p>
+          <div class="footer-links">
+            <a
+              class="inline-flex items-center gap-2"
+              href={`${GITHUB_REPO}/blob/main/docs/PLAN.md`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="code" size={14} />
+              docs/PLAN.md
+            </a>
+            <a
+              class="inline-flex items-center gap-2"
+              href={`${GITHUB_REPO}/blob/main/docs/DATA.md`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="database" size={14} />
+              docs/DATA.md
+            </a>
+            <a
+              class="inline-flex items-center gap-2"
+              href={`${GITHUB_REPO}/blob/main/AGENTS.md`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="sparkles" size={14} />
+              AGENTS.md
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

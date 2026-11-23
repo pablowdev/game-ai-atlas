@@ -1,0 +1,31 @@
+---
+interface Props {
+  label: string;
+  tone?: string;
+  dot?: boolean;
+  outline?: boolean;
+  class?: string;
+  title?: string;
+}
+
+const {
+  label,
+  tone = "slate",
+  dot = false,
+  outline = false,
+  class: className,
+  title
+} = Astro.props;
+
+const classes = [
+  "badge",
+  `badge-${tone}`,
+  outline ? "badge-outline" : "",
+  dot ? "badge-dot" : "",
+  className ?? ""
+]
+  .filter(Boolean)
+  .join(" ");
+---
+
+<span class={classes} title={title}>{label}</span>

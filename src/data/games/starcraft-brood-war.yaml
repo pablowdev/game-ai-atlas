@@ -1,0 +1,19 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: starcraft-brood-war
+title: "StarCraft: Brood War"
+aliases:
+  - Brood War
+  - StarCraft BW
+  - BW
+year: 1998
+platforms:
+  - PC
+genres:
+  - RTS
+series: StarCraft
+developers:
+  - Blizzard Entertainment
+description_es: Clásico RTS con una API de bots y una escena competitiva de IA.
+description_en: Classic RTS with a bot API and a competitive AI scene.

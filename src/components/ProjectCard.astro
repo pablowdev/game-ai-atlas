@@ -1,0 +1,84 @@
+---
+import Badge from "./Badge.astro";
+import Icon from "./Icon.astro";
+import type { ProjectView } from "../lib/data";
+import type { Lang } from "../i18n/types";
+import { ui } from "../i18n/ui";
+import { routes } from "../i18n/routes";
+import {
+  formatRelative,
+  relationLabel,
+  relationTones,
+  statusLabel,
+  statusTones,
+  techLabel
+} from "../lib/format";
+import { withBase } from "../lib/url";
+
+interface Props {
+  project: ProjectView;
+  lang: Lang;
+  showGames?: boolean;
+  showTech?: boolean;
+}
+
+const {
+  project,
+  lang,
+  showGames = true,
+  showTech = false
+} = Astro.props;
+const t = ui[lang];
+const url = withBase(routes.project(lang, project.id));
+const activity = formatRelative(project.lastCommitAt, lang);
+const description = lang === "es" ? project.description_es : project.description_en;
+---
+
+<article class="card card-pad flex h-full flex-col justify-between gap-3">
+  <div>
+    <div class="flex flex-wrap items-center gap-1.5">
+      <a class="font-bold tracking-tight hover:text-accent" href={url}>
+        {project.name}
+      </a>
+      <Badge
+        label={relationLabel(project.relation, lang)}
+        tone={relationTones[project.relation]}
+      />
+      <Badge
+        label={statusLabel(project.status, lang)}
+        tone={statusTones[project.status]}
+        dot
+      />
+    </div>
+
+    <p class="mt-2 text-sm leading-relaxed text-muted">{description}</p>
+
+    {showTech && project.tech.length > 0 && (
+      <div class="tag-list mt-2">
+        {project.tech.slice(0, 3).map((tech) => (
+          <span class="tag">{techLabel(tech, lang)}</span>
+        ))}
+      </div>
+    )}
+
+    {showGames && project.gameTitles.length > 0 && (
+      <p class="mt-2 text-xs text-muted">{project.gameTitles.join(" · ")}</p>
+    )}
+  </div>
+
+  <div class="flex items-end justify-between gap-2 border-t border-line pt-2 text-xs text-muted">
+    <span class="inline-flex flex-wrap items-center gap-2">
+      {activity && (
+        <span class="inline-flex items-center gap-1">
+          <Icon name="clock" size={12} />
+          {activity}
+        </span>
+      )}
+      {project.license && <span>{project.license}</span>}
+    </span>
+    <a class="link-arrow text-xs" href={url} aria-label={`${t.search.viewProject}: ${project.name}`}>
+      {t.search.viewProject}
+      <Icon name="arrowRight" size={13} />
+    </a>
+  </div>
+</article>

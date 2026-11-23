@@ -1,0 +1,34 @@
+---
+import type { SiteStats } from "../lib/data";
+import type { Lang } from "../i18n/types";
+import { ui } from "../i18n/ui";
+import { formatDate, formatNumber } from "../lib/format";
+
+interface Props {
+  stats: SiteStats;
+  lang: Lang;
+}
+
+const { stats, lang } = Astro.props;
+const t = ui[lang];
+const updated = formatDate(stats.updatedAt, lang);
+---
+
+<div class="stats-row">
+  <div class="stat">
+    <div class="stat-value">{formatNumber(stats.totalGames, lang)}</div>
+    <div class="stat-label">{t.home.statsGames}</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value">{formatNumber(stats.totalProjects, lang)}</div>
+    <div class="stat-label">{t.home.statsProjects}</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value">{formatNumber(stats.activeProjects, lang)}</div>
+    <div class="stat-label">{t.home.statsActive}</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value text-[0.95rem] leading-snug">{updated ?? "—"}</div>
+    <div class="stat-label">{t.home.statsUpdated}</div>
+  </div>
+</div>

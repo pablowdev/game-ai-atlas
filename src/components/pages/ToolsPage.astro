@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Icon from "../Icon.astro";
+import ProjectCard from "../ProjectCard.astro";
+import { routes } from "../../i18n/routes";
+import { otherLang, type Lang } from "../../i18n/types";
+import { ui } from "../../i18n/ui";
+import { getData } from "../../lib/data";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const data = getData();
+---
+
+<BaseLayout
+  lang={lang}
+  title={t.tools.title}
+  description={t.tools.intro}
+  canonicalPath={routes.tools[lang]}
+  alternatePath={routes.tools[otherLang(lang)]}
+>
+  <section class="container-page detail-hero">
+    <p class="hero-eyebrow">
+      <Icon name="code" size={14} />
+      {t.tools.count(data.generalProjects.length + data.multiProjects.length)}
+    </p>
+    <h1 class="detail-title">{t.tools.title}</h1>
+    <p class="detail-subtitle">{t.tools.intro}</p>
+  </section>
+
+  <section class="container-page section pt-0">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">{t.tools.general}</h2>
+        <p class="section-subtitle">{t.tools.note}</p>
+      </div>
+    </div>
+    <div class="card-grid card-grid-3">
+      {data.generalProjects.map((project) => (
+        <ProjectCard project={project} lang={lang} showGames={false} showTech />
+      ))}
+    </div>
+  </section>
+
+  <section class="container-page section">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">{t.tools.multi}</h2>
+        <p class="section-subtitle">
+          {lang === "es"
+            ? "Entornos y frameworks que cubren varios juegos a la vez."
+            : "Environments and frameworks that cover several games at once."}
+        </p>
+      </div>
+    </div>
+    <div class="card-grid card-grid-3">
+      {data.multiProjects.map((project) => (
+        <ProjectCard project={project} lang={lang} showGames showTech />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

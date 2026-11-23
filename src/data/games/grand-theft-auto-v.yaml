@@ -1,0 +1,20 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: grand-theft-auto-v
+title: Grand Theft Auto V
+aliases:
+  - GTA V
+  - GTAV
+year: 2013
+platforms:
+  - PC
+  - Consolas
+genres:
+  - Acción
+  - Mundo abierto
+series: Grand Theft Auto
+developers:
+  - Rockstar North
+description_es: Mundo abierto de acción y conducción, con proyectos de mods y agentes.
+description_en: Open-world action and driving game with mod and agent projects.

@@ -1,0 +1,18 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: donkey-kong
+title: Donkey Kong
+aliases:
+  - Donkey Kong
+year: 1981
+platforms:
+  - Arcade
+  - NES
+genres:
+  - Plataformas
+series: Donkey Kong
+developers:
+  - Nintendo
+description_es: Arcade de plataformas y barriles, uno de los primeros retos de IA de juegos.
+description_en: Barrel-and-platform arcade game, one of the earliest game AI challenges.

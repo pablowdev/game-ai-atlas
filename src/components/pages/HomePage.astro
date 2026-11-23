@@ -1,0 +1,199 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import GameCard from "../GameCard.astro";
+import Icon from "../Icon.astro";
+import ProjectCard from "../ProjectCard.astro";
+import Search from "../Search.astro";
+import StatsBar from "../StatsBar.astro";
+import { GITHUB_REPO } from "../../config";
+import { routes } from "../../i18n/routes";
+import { otherLang, type Lang } from "../../i18n/types";
+import { ui } from "../../i18n/ui";
+import { getData } from "../../lib/data";
+import { withBase } from "../../lib/url";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const data = getData();
+const featured = data.featuredGames.slice(0, 6);
+const recent = data.recentProjects.slice(0, 6);
+const general = data.generalProjects.slice(0, 3);
+const wanted = data.games.filter((game) => game.wanted).slice(0, 4);
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${t.siteName} · ${t.tagline}`}
+  description={t.description}
+  canonicalPath={routes.home[lang]}
+  alternatePath={routes.home[otherLang(lang)]}
+>
+  <section class="container-page hero">
+    <span class="hero-eyebrow">
+      <Icon name="sparkles" size={14} />
+      {t.tagline}
+    </span>
+    <h1 class="hero-title">{t.home.heroTitle}</h1>
+    <p class="hero-subtitle">{t.home.heroSubtitle}</p>
+
+    <Search lang={lang} />
+    <StatsBar stats={data.stats} lang={lang} />
+  </section>
+
+  <section class="container-page section">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">{t.home.featured}</h2>
+        <p class="section-subtitle">{t.home.featuredSubtitle}</p>
+      </div>
+      <a class="link-arrow" href={withBase(routes.games[lang])}>
+        {t.home.exploreAll}
+        <Icon name="arrowRight" size={16} />
+      </a>
+    </div>
+    <div class="card-grid card-grid-3">
+      {featured.map((game) => <GameCard game={game} lang={lang} />)}
+    </div>
+  </section>
+
+  {
+    wanted.length > 0 && (
+      <section class="container-page section pt-0">
+        <div class="card card-pad">
+          <div class="section-head mb-2">
+            <div>
+              <h2 class="section-title text-lg">{t.home.wantedBadge}</h2>
+              <p class="section-subtitle">
+                {lang === "es"
+                  ? "Juegos icónicos que todavía no tienen proyectos verificados."
+                  : "Iconic games that do not have verified projects yet."}
+              </p>
+            </div>
+            <a class="link-arrow" href={withBase(routes.contribute[lang])}>
+              {t.home.contributeCta}
+              <Icon name="arrowRight" size={16} />
+            </a>
+          </div>
+          <div>
+            {wanted.map((game) => (
+              <a
+                class="wanted-row"
+                href={withBase(routes.game(lang, game.id))}
+              >
+                <span>
+                  <span class="font-semibold">{game.title}</span>
+                  <span class="ml-2 text-xs text-muted">
+                    {[game.year, game.genres[0]].filter(Boolean).join(" · ")}
+                  </span>
+                </span>
+                <span class="inline-flex items-center gap-2 text-xs text-muted">
+                  {t.badges.wanted}
+                  <Icon name="arrowRight" size={14} />
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="container-page section">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">{t.home.recent}</h2>
+        <p class="section-subtitle">{t.home.recentSubtitle}</p>
+      </div>
+    </div>
+    <div class="card-grid">
+      {recent.map((project) => (
+        <ProjectCard project={project} lang={lang} showGames showTech={false} />
+      ))}
+    </div>
+  </section>
+
+  <section class="container-page section">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">{t.home.how}</h2>
+        <p class="section-subtitle">{t.home.howSubtitle}</p>
+      </div>
+    </div>
+    <div class="card-grid card-grid-3">
+      <div class="card card-pad">
+        <div class="icon-tile"><Icon name="layers" size={20} /></div>
+        <h3 class="mt-3 font-bold">{t.home.howRelationTitle}</h3>
+        <p class="mt-1 text-sm leading-relaxed text-muted">
+          {t.home.howRelation}
+        </p>
+      </div>
+      <div class="card card-pad">
+        <div class="icon-tile"><Icon name="clock" size={20} /></div>
+        <h3 class="mt-3 font-bold">{t.home.howStatusTitle}</h3>
+        <p class="mt-1 text-sm leading-relaxed text-muted">
+          {t.home.howStatus}
+        </p>
+      </div>
+      <div class="card card-pad">
+        <div class="icon-tile"><Icon name="check" size={20} /></div>
+        <h3 class="mt-3 font-bold">{t.home.howFlagsTitle}</h3>
+        <p class="mt-1 text-sm leading-relaxed text-muted">
+          {t.home.howFlags}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-page section">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">{t.home.tools}</h2>
+        <p class="section-subtitle">{t.home.toolsSubtitle}</p>
+      </div>
+      <a class="link-arrow" href={withBase(routes.tools[lang])}>
+        {t.home.toolsCta}
+        <Icon name="arrowRight" size={16} />
+      </a>
+    </div>
+    <div class="card-grid card-grid-3">
+      {general.map((project) => (
+        <ProjectCard project={project} lang={lang} showGames={false} showTech />
+      ))}
+    </div>
+  </section>
+
+  <section class="container-page section">
+    <div class="cta-card">
+      <div class="flex flex-col justify-between gap-5 md:flex-row md:items-center">
+        <div class="max-w-2xl">
+          <h2 class="text-2xl font-bold tracking-tight">
+            {t.home.contributeTitle}
+          </h2>
+          <p class="mt-2 text-sm leading-relaxed text-muted">
+            {t.home.contributeText}
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <a class="btn btn-primary" href={withBase(routes.contribute[lang])}>
+            {t.home.contributeCta}
+            <Icon name="arrowRight" size={15} />
+          </a>
+          <a
+            class="btn"
+            href={GITHUB_REPO}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${t.siteName} · GitHub`}
+          >
+            <Icon name="github" size={15} />
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

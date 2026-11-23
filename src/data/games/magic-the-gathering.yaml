@@ -1,0 +1,18 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: magic-the-gathering
+title: "Magic: The Gathering"
+aliases:
+  - MTG
+  - Magic
+year: 1993
+platforms:
+  - Tablero
+  - PC
+genres:
+  - Cartas coleccionables
+developers:
+  - Wizards of the Coast
+description_es: Juego de cartas coleccionables con reglas complejas y motores open source con IA.
+description_en: Complex collectible card game with open-source engines and AI.

@@ -1,0 +1,20 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: zelda-ocarina-of-time
+title: "The Legend of Zelda: Ocarina of Time"
+aliases:
+  - Ocarina of Time
+  - OoT
+  - Zelda OoT
+year: 1998
+platforms:
+  - N64
+genres:
+  - Aventura
+  - Acción
+series: The Legend of Zelda
+developers:
+  - Nintendo
+description_es: Aventura 3D de Nintendo, referencia en diseño de mundos y IA de juegos.
+description_en: Nintendo 3D adventure, a reference in world design and game AI.

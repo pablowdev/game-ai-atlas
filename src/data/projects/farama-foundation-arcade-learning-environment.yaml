@@ -1,0 +1,33 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: farama-foundation-arcade-learning-environment
+name: Arcade Learning Environment
+repo: Farama-Foundation/Arcade-Learning-Environment
+homepage: https://ale.farama.org/
+games:
+  - breakout
+  - pong
+  - space-invaders
+  - pac-man
+  - montezumas-revenge
+  - pitfall
+  - adventure
+game_scope: multi
+relation: environment
+ai_role: research
+tech:
+  - reinforcement-learning
+description_es: Framework para desarrollar agentes de IA en juegos de Atari 2600.
+description_en: Framework for developing AI agents for Atari 2600 games.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: GPL-2.0
+links:
+  docs: https://ale.farama.org/
+tags:
+  - atari
+  - research
+  - benchmark
+review_status: approved

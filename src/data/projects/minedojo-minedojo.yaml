@@ -1,0 +1,30 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: minedojo-minedojo
+name: MineDojo
+repo: MineDojo/MineDojo
+homepage: https://minedojo.org/
+games:
+  - minecraft
+game_scope: specific
+relation: environment
+ai_role: research
+tech:
+  - reinforcement-learning
+  - llm
+  - imitation-learning
+description_es: Framework de tareas y entornos abiertos en Minecraft para agentes embodied con conocimiento a gran escala.
+description_en: Open-ended task and environment framework in Minecraft for embodied agents with internet-scale knowledge.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: MIT
+links:
+  docs: https://minedojo.org/
+  paper: https://arxiv.org/abs/2206.08853
+tags:
+  - sandbox
+  - research
+  - benchmark
+review_status: approved

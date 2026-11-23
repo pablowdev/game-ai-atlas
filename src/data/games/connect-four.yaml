@@ -1,0 +1,19 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: connect-four
+title: Connect Four
+aliases:
+  - Connect 4
+  - Cuatro en línea
+year: 1974
+platforms:
+  - Tablero
+  - PC
+genres:
+  - Tablero
+  - Estrategia
+developers:
+  - Milton Bradley
+description_es: Juego de tablero de cuatro en línea, clásico en RL y búsqueda.
+description_en: Four-in-a-row board game, classic in RL and search.

@@ -1,0 +1,29 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: datamllab-rlcard
+name: RLCard
+repo: datamllab/rlcard
+homepage: https://rlcard.org/
+games:
+  - poker
+  - dou-dizhu
+  - mahjong
+game_scope: multi
+relation: tool
+ai_role: research
+tech:
+  - reinforcement-learning
+description_es: Toolkit de RL para juegos de cartas como póker, Dou Dizhu, Mahjong y UNO.
+description_en: RL toolkit for card games such as poker, Dou Dizhu, Mahjong, and UNO.
+requires_original_game: false
+uses_original_assets: false
+playable_in_browser: false
+license: MIT
+links:
+  docs: https://rlcard.org/
+  paper: https://arxiv.org/abs/1910.04376
+tags:
+  - cards
+  - framework
+review_status: approved

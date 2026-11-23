@@ -1,0 +1,20 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: pokemon-red
+title: Pokémon Red
+aliases:
+  - Pokemon Red
+  - Pokémon Rojo
+  - Pokemon Rojo
+year: 1996
+platforms:
+  - Game Boy
+genres:
+  - RPG
+series: Pokémon
+developers:
+  - Game Freak
+description_es: RPG de captura de criaturas para Game Boy, popular entre proyectos de agentes que aprenden a jugar.
+description_en: Game Boy creature-catching RPG popular among agents that learn to play.
+featured: true

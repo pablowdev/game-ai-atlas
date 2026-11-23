@@ -1,0 +1,17 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: breakout
+title: Breakout
+aliases:
+  - Breakout Atari
+year: 1976
+platforms:
+  - Arcade
+  - Atari 2600
+genres:
+  - Arcade
+developers:
+  - Atari
+description_es: Arcade de romper ladrillos, uno de los benchmarks más usados en Deep RL.
+description_en: Brick-breaking arcade game, one of the most used Deep RL benchmarks.

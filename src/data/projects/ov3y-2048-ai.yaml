@@ -1,0 +1,22 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: ov3y-2048-ai
+name: 2048-AI
+repo: ov3y/2048-AI
+games:
+  - "2048"
+game_scope: specific
+relation: agent
+ai_role: research
+tech:
+  - expectimax
+description_es: Implementación temprana de una IA para 2048.
+description_en: Early AI implementation for 2048.
+requires_original_game: false
+uses_original_assets: false
+playable_in_browser: false
+tags:
+  - puzzle
+  - legacy
+review_status: approved

@@ -1,0 +1,24 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: oidahdsah0-rimworld-ai-framework
+name: RimWorld AI Framework
+repo: oidahdsah0/Rimworld_AI_Framework
+games:
+  - rimworld
+game_scope: specific
+relation: mod
+ai_role: runtime
+tech:
+  - llm
+description_es: Framework de IA para RimWorld que integra LLMs en la gestión de la colonia.
+description_en: AI framework for RimWorld that integrates LLMs into colony management.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: MIT
+tags:
+  - simulation
+  - mod
+  - llm
+review_status: approved

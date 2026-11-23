@@ -1,0 +1,16 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: tetris
+title: Tetris
+aliases:
+  - Tetris
+year: 1984
+platforms:
+  - Varias
+genres:
+  - Puzle
+developers:
+  - Alexey Pajitnov
+description_es: Puzle de piezas que caen, con una larga historia de heurísticas, búsqueda y aprendizaje por refuerzo.
+description_en: Falling-block puzzle with a long history of heuristics, search, and reinforcement learning.

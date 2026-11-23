@@ -1,0 +1,15 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: snake
+title: Snake
+aliases:
+  - Snake game
+  - La serpiente
+year: 1976
+platforms:
+  - Varias
+genres:
+  - Arcade
+description_es: Juego de arcade de crecimiento y colisiones, muy usado para enseñar IA y algoritmos de búsqueda.
+description_en: Arcade growth-and-collision game often used to teach AI and search algorithms.

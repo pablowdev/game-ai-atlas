@@ -1,0 +1,18 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: "2048"
+title: "2048"
+aliases:
+  - 2048 game
+year: 2014
+platforms:
+  - Web
+  - Móvil
+genres:
+  - Puzle
+developers:
+  - Gabriele Cirulli
+description_es: Puzle de deslizamiento de fichas, resuelto con expectimax, Monte Carlo y aprendizaje.
+description_en: Sliding-tile puzzle solved with expectimax, Monte Carlo, and learning.
+featured: true

@@ -1,0 +1,27 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: minedojo-voyager
+name: Voyager
+repo: MineDojo/Voyager
+homepage: https://voyager.minedojo.org/
+games:
+  - minecraft
+game_scope: specific
+relation: agent
+ai_role: research
+tech:
+  - llm
+description_es: Agente LLM que juega a Minecraft de forma abierta, escribiendo y refinando habilidades con feedback del entorno.
+description_en: LLM agent that plays Minecraft open-endedly, writing and refining skills from environment feedback.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: MIT
+links:
+  paper: https://arxiv.org/abs/2305.16291
+tags:
+  - sandbox
+  - llm
+  - agent
+review_status: approved

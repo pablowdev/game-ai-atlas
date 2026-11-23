@@ -1,0 +1,19 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: rocket-league
+title: Rocket League
+aliases:
+  - RL
+year: 2015
+platforms:
+  - PC
+  - Consolas
+genres:
+  - Deportes
+  - Carreras
+developers:
+  - Psyonix
+description_es: Fútbol vehicular con física arcade, popular para bots de RL y competiciones.
+description_en: Vehicular soccer with arcade physics, popular for RL bots and competitions.
+featured: true

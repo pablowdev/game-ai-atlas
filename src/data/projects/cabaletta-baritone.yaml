@@ -1,0 +1,27 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: cabaletta-baritone
+name: Baritone
+repo: cabaletta/baritone
+homepage: https://baritone.leijurv.com/
+games:
+  - minecraft
+game_scope: specific
+relation: agent
+ai_role: runtime
+tech:
+  - pathfinding
+  - search
+description_es: Bot de pathfinding y automatización para Minecraft, muy usado como base de agentes.
+description_en: Pathfinding and automation bot for Minecraft, widely used as a base for agents.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: LGPL-3.0
+links:
+  docs: https://baritone.leijurv.com/
+tags:
+  - sandbox
+  - automation
+review_status: approved

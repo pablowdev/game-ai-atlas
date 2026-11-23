@@ -1,0 +1,17 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: chess
+title: Chess
+aliases:
+  - Ajedrez
+year: 1475
+platforms:
+  - Tablero
+  - PC
+genres:
+  - Estrategia
+  - Tablero
+description_es: Juego de estrategia milenario, cuna de la IA clásica y de los motores neuronales modernos.
+description_en: Ancient strategy game, birthplace of classical AI and modern neural engines.
+featured: true

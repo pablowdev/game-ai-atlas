@@ -1,0 +1,16 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: adventure
+title: Adventure
+aliases:
+  - Atari Adventure
+year: 1979
+platforms:
+  - Atari 2600
+genres:
+  - Aventura
+developers:
+  - Atari
+description_es: Aventura de Atari con exploración y objetos, un reto clásico de RL.
+description_en: Atari adventure with exploration and items, a classic RL challenge.

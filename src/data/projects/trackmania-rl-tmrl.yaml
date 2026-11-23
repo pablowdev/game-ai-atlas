@@ -1,0 +1,24 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: trackmania-rl-tmrl
+name: TMRL
+repo: trackmania-rl/tmrl
+homepage: https://github.com/trackmania-rl/tmrl
+games:
+  - trackmania
+game_scope: specific
+relation: tool
+ai_role: research
+tech:
+  - reinforcement-learning
+description_es: Librería de RL para aplicaciones en tiempo real, con ejemplo en Trackmania.
+description_en: RL library for real-time applications, with a Trackmania example.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: MIT
+tags:
+  - racing
+  - library
+review_status: approved

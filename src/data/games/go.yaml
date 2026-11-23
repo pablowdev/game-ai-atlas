@@ -1,0 +1,18 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: go
+title: Go
+aliases:
+  - Weiqi
+  - Baduk
+  - 围棋
+year: -500
+platforms:
+  - Tablero
+  - PC
+genres:
+  - Estrategia
+  - Tablero
+description_es: Juego de tablero de territorio, famoso por AlphaGo y los motores de self-play.
+description_en: Territory board game famous for AlphaGo and self-play engines.

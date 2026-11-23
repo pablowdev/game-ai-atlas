@@ -1,0 +1,21 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: skyrim
+title: "The Elder Scrolls V: Skyrim"
+aliases:
+  - Skyrim
+  - TES V
+year: 2011
+platforms:
+  - PC
+  - Consolas
+genres:
+  - RPG
+  - Mundo abierto
+series: The Elder Scrolls
+developers:
+  - Bethesda Game Studios
+description_es: RPG de mundo abierto, escenario de mods con NPCs conversacionales y LLMs.
+description_en: Open-world RPG, a stage for mods with conversational NPCs and LLMs.
+featured: true

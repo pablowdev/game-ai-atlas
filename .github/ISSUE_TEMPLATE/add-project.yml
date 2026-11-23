@@ -1,0 +1,103 @@
+name: Añadir proyecto
+description: Propón un proyecto open source de IA basado en un videojuego existente.
+title: "[Proyecto] "
+labels: ["data", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por contribuir. Antes de enviar, comprueba que el proyecto es open source, tiene licencia visible y una relación verificable con el juego. No envíes ROMs, ISOs, assets ni enlaces a piratería.
+
+  - type: input
+    id: repo
+    attributes:
+      label: Repositorio
+      description: URL del repositorio público (GitHub, GitLab, etc.).
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+
+  - type: input
+    id: game
+    attributes:
+      label: Juego(s) relacionado(s)
+      description: Nombre del juego o enlace a su página en el atlas.
+      placeholder: Doom, Minecraft, ajedrez...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: relation
+    attributes:
+      label: Relación con el juego
+      options:
+        - Agente que juega
+        - Clon / remake
+        - Mod
+        - Entorno / benchmark
+        - World model
+        - Herramienta
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ai_role
+    attributes:
+      label: Rol de la IA
+      options:
+        - Construido con IA
+        - IA en runtime
+        - Investigación
+        - Mixto
+    validations:
+      required: true
+
+  - type: textarea
+    id: description_es
+    attributes:
+      label: Descripción breve en español
+      description: 1-2 frases objetivas. Qué hace y cómo se relaciona con el juego.
+      maxlength: 300
+    validations:
+      required: true
+
+  - type: textarea
+    id: description_en
+    attributes:
+      label: Short description in English
+      description: 1-2 objective sentences. What it does and how it relates to the game.
+      maxlength: 300
+    validations:
+      required: true
+
+  - type: input
+    id: license
+    attributes:
+      label: Licencia
+      description: Si la conoces, indica el identificador SPDX.
+      placeholder: MIT, Apache-2.0, GPL-3.0...
+
+  - type: checkboxes
+    id: flags
+    attributes:
+      label: Requisitos
+      options:
+        - label: Requiere el juego original
+        - label: Usa assets originales
+        - label: Es jugable en el navegador
+        - label: Tiene demo pública
+
+  - type: input
+    id: evidence
+    attributes:
+      label: Fuente o evidencia
+      description: Enlace al README, demo, paper o artículo que demuestra la relación con el juego.
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notas adicionales
+      description: Dudas, limitaciones, advertencias legales o cualquier contexto útil.

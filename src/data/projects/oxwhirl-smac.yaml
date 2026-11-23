@@ -1,0 +1,26 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: oxwhirl-smac
+name: SMAC
+repo: oxwhirl/smac
+games:
+  - starcraft-ii
+game_scope: specific
+relation: environment
+ai_role: research
+tech:
+  - reinforcement-learning
+  - multi-agent
+description_es: Benchmark de control multiagente basado en StarCraft II.
+description_en: Multi-agent control benchmark based on StarCraft II.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: MIT
+links:
+  paper: https://arxiv.org/abs/1902.04043
+tags:
+  - rts
+  - benchmark
+review_status: approved

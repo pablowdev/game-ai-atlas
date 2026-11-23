@@ -1,0 +1,26 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: rlbot-rlbot
+name: RLBot
+repo: RLBot/RLBot
+homepage: https://rlbot.org/
+games:
+  - rocket-league
+game_scope: specific
+relation: tool
+ai_role: runtime
+tech:
+  - bot-framework
+description_es: Framework para escribir bots de Rocket League en distintos lenguajes.
+description_en: Framework for writing Rocket League bots in multiple languages.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: MIT
+links:
+  docs: https://rlbot.org/
+tags:
+  - sports
+  - framework
+review_status: approved

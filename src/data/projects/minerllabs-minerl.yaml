@@ -1,0 +1,28 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: minerllabs-minerl
+name: MineRL
+repo: minerllabs/minerl
+homepage: https://minerl.io/
+games:
+  - minecraft
+game_scope: specific
+relation: environment
+ai_role: research
+tech:
+  - reinforcement-learning
+  - imitation-learning
+description_es: Entornos y competiciones de aprendizaje por refuerzo sample-efficient en Minecraft.
+description_en: Sample-efficient reinforcement learning environments and competitions in Minecraft.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+links:
+  docs: https://minerl.io/docs/
+  paper: https://arxiv.org/abs/1907.13440
+tags:
+  - sandbox
+  - research
+  - competition
+review_status: approved

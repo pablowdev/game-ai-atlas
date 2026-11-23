@@ -1,0 +1,18 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: super-mario-bros
+title: Super Mario Bros.
+aliases:
+  - SMB
+  - Mario Bros.
+year: 1985
+platforms:
+  - NES
+genres:
+  - Plataformas
+series: Super Mario
+developers:
+  - Nintendo
+description_es: Plataformas de NES que se convirtió en un banco de pruebas para IA de control y RL.
+description_en: NES platformer that became a testbed for control AI and reinforcement learning.

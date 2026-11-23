@@ -1,0 +1,16 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: pong
+title: Pong
+aliases:
+  - Pong
+year: 1972
+platforms:
+  - Arcade
+genres:
+  - Arcade
+developers:
+  - Atari
+description_es: El primer videojuego comercial de éxito, usado para enseñar RL.
+description_en: The first successful commercial video game, used to teach RL.

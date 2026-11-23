@@ -1,0 +1,18 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: ultimate-mortal-kombat-3
+title: Ultimate Mortal Kombat 3
+aliases:
+  - UMK3
+year: 1995
+platforms:
+  - Arcade
+  - Consolas
+genres:
+  - Lucha
+series: Mortal Kombat
+developers:
+  - Midway
+description_es: Juego de lucha arcade incluido en DIAMBRA Arena para RL.
+description_en: Arcade fighting game included in DIAMBRA Arena for RL.

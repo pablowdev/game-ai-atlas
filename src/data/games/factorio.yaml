@@ -1,0 +1,17 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: factorio
+title: Factorio
+aliases:
+  - Factorio
+year: 2020
+platforms:
+  - PC
+genres:
+  - Automatización
+  - Estrategia
+developers:
+  - Wube Software
+description_es: Juego de automatización y logística, usado para evaluar agentes y LLMs.
+description_en: Automation and logistics game used to evaluate agents and LLMs.

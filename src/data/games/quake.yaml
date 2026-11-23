@@ -1,0 +1,17 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: quake
+title: Quake
+aliases:
+  - Quake
+year: 1996
+platforms:
+  - PC
+genres:
+  - FPS
+series: Quake
+developers:
+  - id Software
+description_es: Shooter 3D clásico, con una larga historia de ports y experimentos de IA.
+description_en: Classic 3D shooter with a long history of ports and AI experiments.

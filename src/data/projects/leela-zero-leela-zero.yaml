@@ -1,0 +1,26 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: leela-zero-leela-zero
+name: Leela Zero
+repo: leela-zero/leela-zero
+homepage: https://zero.sjeng.org/
+games:
+  - go
+game_scope: specific
+relation: agent
+ai_role: research
+tech:
+  - reinforcement-learning
+  - self-play
+description_es: Motor de Go sin conocimiento humano, inspirado en AlphaGo Zero.
+description_en: Go engine with no human knowledge, inspired by AlphaGo Zero.
+requires_original_game: false
+uses_original_assets: false
+playable_in_browser: false
+license: GPL-3.0
+tags:
+  - board
+  - engine
+  - alphago-zero
+review_status: approved

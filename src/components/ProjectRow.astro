@@ -1,0 +1,139 @@
+---
+import Badge from "./Badge.astro";
+import Icon from "./Icon.astro";
+import type { ProjectView } from "../lib/data";
+import type { Lang } from "../i18n/types";
+import { ui } from "../i18n/ui";
+import { routes } from "../i18n/routes";
+import {
+  formatCompact,
+  formatDate,
+  formatRelative,
+  relationLabel,
+  relationTones,
+  statusLabel,
+  statusTones
+} from "../lib/format";
+import { withBase } from "../lib/url";
+
+interface Props {
+  project: ProjectView;
+  lang: Lang;
+  showGames?: boolean;
+}
+
+const { project, lang, showGames = false } = Astro.props;
+const t = ui[lang];
+const url = withBase(routes.project(lang, project.id));
+const activity = formatRelative(project.lastCommitAt, lang);
+const exactDate = formatDate(project.lastCommitAt, lang);
+const stars = formatCompact(project.stars, lang);
+const demo = project.links?.demo;
+const parsedActivity = project.lastCommitAt
+  ? Date.parse(project.lastCommitAt)
+  : 0;
+const activityMs = Number.isNaN(parsedActivity) ? 0 : parsedActivity;
+---
+
+<li
+  class="project-row"
+  data-project
+  data-relation={project.relation}
+  data-status={project.status}
+  data-requires={project.requires_original_game ? "yes" : "no"}
+  data-browser={project.playable_in_browser ? "yes" : "no"}
+  data-stars={project.stars ?? 0}
+  data-activity={activityMs}
+  data-name={project.name.toLowerCase()}
+>
+  <div class="project-row-main">
+    <div class="project-row-title">
+      <a class="project-row-name" href={url}>{project.name}</a>
+      <Badge
+        label={relationLabel(project.relation, lang)}
+        tone={relationTones[project.relation]}
+      />
+      <Badge
+        label={statusLabel(project.status, lang)}
+        tone={statusTones[project.status]}
+        dot
+      />
+    </div>
+
+    <p class="project-row-description">
+      {lang === "es" ? project.description_es : project.description_en}
+    </p>
+
+    {
+      (project.requires_original_game ||
+        project.playable_in_browser ||
+        project.hasDemo) && (
+        <div class="tag-list mt-2">
+          {project.requires_original_game && (
+            <Badge
+              label={t.badges.requiresOriginal}
+              tone="amber"
+              outline
+            />
+          )}
+          {project.playable_in_browser && (
+            <Badge label={t.badges.browser} tone="emerald" outline />
+          )}
+          {project.hasDemo && <Badge label={t.badges.demo} tone="blue" outline />}
+        </div>
+      )
+    }
+
+    <div class="project-row-meta">
+      {activity && (
+        <span title={exactDate ?? undefined}>
+          <Icon name="clock" size={13} />
+          {activity}
+        </span>
+      )}
+      {project.stars != null && (
+        <span>
+          <Icon name="star" size={13} />
+          {stars}
+        </span>
+      )}
+      {project.language && <span>{project.language}</span>}
+      {project.license && <span>{project.license}</span>}
+      {showGames && project.gameTitles.length > 0 && (
+        <span>{project.gameTitles.join(" · ")}</span>
+      )}
+    </div>
+  </div>
+
+  <div class="project-row-actions">
+    <a
+      class="btn btn-sm"
+      href={url}
+      aria-label={`${t.search.viewProject}: ${project.name}`}
+    >
+      {t.search.viewProject}
+    </a>
+    <a
+      class="btn btn-sm"
+      href={project.repoUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`GitHub: ${project.name}`}
+    >
+      <Icon name="github" size={14} />
+      GitHub
+    </a>
+    {demo && (
+      <a
+        class="btn btn-sm btn-primary"
+        href={demo}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${t.project.demo}: ${project.name}`}
+      >
+        {t.project.demo}
+        <Icon name="external" size={13} />
+      </a>
+    )}
+  </div>
+</li>

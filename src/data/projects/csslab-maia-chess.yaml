@@ -1,0 +1,27 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: csslab-maia-chess
+name: Maia Chess
+repo: CSSLab/maia-chess
+homepage: https://maiachess.com/
+games:
+  - chess
+game_scope: specific
+relation: agent
+ai_role: runtime
+tech:
+  - neural-network
+  - imitation-learning
+description_es: Motor de ajedrez que imita el estilo humano y modela errores de distintos niveles.
+description_en: Chess engine that imitates human style and models mistakes at different levels.
+requires_original_game: false
+uses_original_assets: false
+playable_in_browser: false
+license: GPL-3.0
+links:
+  homepage: https://maiachess.com/
+tags:
+  - board
+  - human-like
+review_status: approved

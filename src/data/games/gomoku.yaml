@@ -1,0 +1,18 @@
+# Game AI Atlas — juego curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: gomoku
+title: Gomoku
+aliases:
+  - Five in a row
+  - Gobang
+  - Cinco en línea
+year: null
+platforms:
+  - Tablero
+  - PC
+genres:
+  - Tablero
+  - Estrategia
+description_es: Juego de tablero de cinco en línea, popular para implementaciones de AlphaZero.
+description_en: Five-in-a-row board game, popular for AlphaZero implementations.

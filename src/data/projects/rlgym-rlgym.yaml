@@ -1,0 +1,26 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: rlgym-rlgym
+name: RLGym
+repo: RLGym/rlgym
+homepage: https://rlgym.org/
+games:
+  - rocket-league
+game_scope: specific
+relation: environment
+ai_role: research
+tech:
+  - reinforcement-learning
+description_es: Entorno tipo Gym para entrenar agentes de RL en Rocket League.
+description_en: Gym-like environment for training RL agents in Rocket League.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: Apache-2.0
+links:
+  docs: https://rlgym.org/
+tags:
+  - sports
+  - research
+review_status: approved

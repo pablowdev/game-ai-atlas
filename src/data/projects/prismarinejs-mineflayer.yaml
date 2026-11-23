@@ -1,0 +1,27 @@
+# Game AI Atlas — proyecto curado. Edita este archivo o añade uno nuevo.
+# Esquema: docs/DATA.md
+
+id: prismarinejs-mineflayer
+name: Mineflayer
+repo: PrismarineJS/mineflayer
+homepage: https://mineflayer.prismarine.js.org/
+games:
+  - minecraft
+game_scope: specific
+relation: tool
+ai_role: runtime
+tech:
+  - bot-framework
+description_es: API de JavaScript para crear bots de Minecraft con una comunidad muy activa.
+description_en: JavaScript API for creating Minecraft bots with a very active community.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+license: MIT
+links:
+  docs: https://mineflayer.prismarine.js.org/
+tags:
+  - sandbox
+  - bot
+  - javascript
+review_status: approved

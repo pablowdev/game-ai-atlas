@@ -1,0 +1,165 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Icon from "../Icon.astro";
+import { GITHUB_REPO } from "../../config";
+import { routes } from "../../i18n/routes";
+import { otherLang, type Lang } from "../../i18n/types";
+import { ui } from "../../i18n/ui";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const addProjectUrl = `${GITHUB_REPO}/issues/new?template=add-project.yml`;
+const addGameUrl = `${GITHUB_REPO}/issues/new?template=add-game.yml`;
+const repoUrl = GITHUB_REPO;
+
+const sample = `id: my-project
+name: My Project
+repo: owner/repo
+games: [doom]
+relation: agent
+ai_role: research
+tech: [reinforcement-learning]
+description_es: Agente que aprende a jugar a Doom.
+description_en: Agent that learns to play Doom.
+requires_original_game: true
+uses_original_assets: true
+playable_in_browser: false
+tags: [fps, research]
+review_status: approved`;
+---
+
+<BaseLayout
+  lang={lang}
+  title={t.contribute.title}
+  description={t.contribute.intro}
+  canonicalPath={routes.contribute[lang]}
+  alternatePath={routes.contribute[otherLang(lang)]}
+>
+  <section class="container-page detail-hero">
+    <p class="hero-eyebrow">
+      <Icon name="plus" size={14} />
+      {t.nav.contribute}
+    </p>
+    <h1 class="detail-title">{t.contribute.title}</h1>
+    <p class="detail-subtitle">{t.contribute.intro}</p>
+  </section>
+
+  <section class="container-page section pt-0">
+    <div class="detail-layout">
+      <div>
+        <div class="card-grid">
+          <div class="card card-pad">
+            <div class="icon-tile"><Icon name="plus" size={20} /></div>
+            <h2 class="mt-3 font-bold">{t.contribute.addProjectTitle}</h2>
+            <p class="mt-1 text-sm leading-relaxed text-muted">
+              {t.contribute.addProject}
+            </p>
+            <a
+              class="btn btn-primary mt-4"
+              href={addProjectUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="plus" size={14} />
+              {t.contribute.addProjectTitle}
+            </a>
+          </div>
+
+          <div class="card card-pad">
+            <div class="icon-tile"><Icon name="gamepad" size={20} /></div>
+            <h2 class="mt-3 font-bold">{t.contribute.addGameTitle}</h2>
+            <p class="mt-1 text-sm leading-relaxed text-muted">
+              {t.contribute.addGame}
+            </p>
+            <a
+              class="btn mt-4"
+              href={addGameUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="plus" size={14} />
+              {t.contribute.addGameTitle}
+            </a>
+          </div>
+        </div>
+
+        <section class="prose-atlas mt-10">
+          <h2>{t.contribute.criteriaTitle}</h2>
+          <ul>
+            {t.contribute.criteria.map((item) => <li>{item}</li>)}
+          </ul>
+
+          <h2>{t.contribute.schemaTitle}</h2>
+          <p>{t.contribute.schema}</p>
+          <pre class="code-block mt-3"><code>{sample}</code></pre>
+
+          <h2>{t.contribute.reviewTitle}</h2>
+          <p>{t.contribute.review}</p>
+
+          <div class="mt-5 flex flex-wrap gap-2">
+            <a class="btn btn-primary" href={addProjectUrl} target="_blank" rel="noopener noreferrer">
+              <Icon name="github" size={14} />
+              {t.contribute.cta}
+            </a>
+            <a
+              class="btn"
+              href={`${repoUrl}/compare`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t.contribute.prCta}
+            >
+              <Icon name="code" size={14} />
+              {t.contribute.prCta}
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <aside class="detail-aside">
+        <div class="meta-card">
+          <p class="meta-card-title">{t.footer.resources}</p>
+          <div class="footer-links">
+            <a
+              class="inline-flex items-center gap-2"
+              href={`${repoUrl}/blob/main/CONTRIBUTING.md`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="code" size={14} />
+              CONTRIBUTING.md
+            </a>
+            <a
+              class="inline-flex items-center gap-2"
+              href={`${repoUrl}/blob/main/docs/DATA.md`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="database" size={14} />
+              docs/DATA.md
+            </a>
+            <a
+              class="inline-flex items-center gap-2"
+              href={`${repoUrl}/blob/main/docs/TAXONOMY.md`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="layers" size={14} />
+              docs/TAXONOMY.md
+            </a>
+          </div>
+        </div>
+
+        <div class="meta-card">
+          <p class="meta-card-title">{t.contribute.reviewTitle}</p>
+          <p class="text-xs leading-relaxed text-muted">
+            {t.contribute.review}
+          </p>
+        </div>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
