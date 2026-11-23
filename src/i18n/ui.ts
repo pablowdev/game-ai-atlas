@@ -34,6 +34,10 @@ const es = {
   },
   home: {
     heroTitle: "Encuentra proyectos de IA para tus juegos favoritos.",
+    heroTitleA: "Encuentra proyectos de IA para tus ",
+    heroTitleEm: "juegos favoritos",
+    heroTitleB: ".",
+    topline: "Directorio abierto",
     heroSubtitle:
       "Un mapa abierto de agentes, remakes, mods, entornos y world models, con la última actividad de GitHub.",
     statsGames: "juegos",
@@ -141,6 +145,7 @@ const es = {
     fidelity: "Fidelidad",
     scope: "Alcance",
     classification: "Clasificación",
+    techTitle: "Tecnologías y etiquetas",
     lastUpdated: "Última actualización de datos"
   },
   badges: {
@@ -318,6 +323,10 @@ const en = {
   },
   home: {
     heroTitle: "Find AI projects for your favorite games.",
+    heroTitleA: "Find AI projects for your ",
+    heroTitleEm: "favorite games",
+    heroTitleB: ".",
+    topline: "Open directory",
     heroSubtitle:
       "An open map of agents, remakes, mods, environments and world models, with the latest GitHub activity.",
     statsGames: "games",
@@ -425,6 +434,7 @@ const en = {
     fidelity: "Fidelity",
     scope: "Scope",
     classification: "Classification",
+    techTitle: "Tech and tags",
     lastUpdated: "Data last updated"
   },
   badges: {

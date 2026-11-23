@@ -37,7 +37,7 @@ const description = lang === "es" ? project.description_es : project.description
 <article class="card card-pad flex h-full flex-col justify-between gap-3">
   <div>
     <div class="flex flex-wrap items-center gap-1.5">
-      <a class="font-bold tracking-tight hover:text-accent" href={url}>
+      <a class="project-card-title font-bold tracking-tight hover:text-accent" href={url}>
         {project.name}
       </a>
       <Badge
@@ -66,7 +66,7 @@ const description = lang === "es" ? project.description_es : project.description
     )}
   </div>
 
-  <div class="flex items-end justify-between gap-2 border-t border-line pt-2 text-xs text-muted">
+  <div class="project-card-footer flex items-end justify-between gap-2 border-t border-line pt-2 text-xs text-muted">
     <span class="inline-flex flex-wrap items-center gap-2">
       {activity && (
         <span class="inline-flex items-center gap-1">

@@ -58,7 +58,7 @@ src/i18n/              # textos, etiquetas y rutas
 src/lib/               # schema, carga de datos, formato y URLs
 src/pages/             # rutas es/ y en/
 scripts/               # validación, índice y sincronización
-docs/                  # plan, datos y taxonomía
+docs/                  # plan, datos, taxonomía y diseño
 .github/               # workflows y plantillas de issues
 ```
 

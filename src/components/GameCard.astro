@@ -33,6 +33,9 @@ const url = withBase(routes.game(lang, game.id));
       </div>
       {game.wanted && <span class="badge badge-slate">{t.badges.wanted}</span>}
     </div>
+    <p class="game-card-description">
+      {lang === "es" ? game.description_es : game.description_en}
+    </p>
   </div>
   <div class="game-card-footer">
     <span class="game-card-count">

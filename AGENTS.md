@@ -11,6 +11,7 @@ Read these first:
 - `README.md`
 - `docs/DATA.md`
 - `docs/TAXONOMY.md`
+- `docs/DESIGN.md`
 - `docs/PLAN.md`
 
 ## Commands
@@ -58,6 +59,7 @@ Read `docs/TAXONOMY.md`. In short:
 - TypeScript strict mode. Avoid `any`; add types for new data shapes.
 - Keep Astro components small and composable. Page views live in `src/components/pages`.
 - UI strings go in `src/i18n/ui.ts`. Taxonomy labels go in `src/i18n/labels.ts`.
+- Follow `docs/DESIGN.md`: Fraunces for display, IBM Plex Sans for body, IBM Plex Mono for labels, warm paper/ink/vermilion palette, hairlines and index numbers. Do not add gradients, glassmorphism, purple SaaS styling or generic rounded card grids.
 - Use the existing CSS variables and utility classes. Keep the design minimal and accessible.
 - Client scripts are plain JavaScript with `// @ts-nocheck` only where DOM typing would add noise. Prefer extracting real logic to typed modules if it grows.
 - Use `withBase()` for internal links and assets so GitHub Pages project paths work.

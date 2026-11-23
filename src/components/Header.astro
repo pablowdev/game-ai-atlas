@@ -37,7 +37,7 @@ const homeHref = withBase(routes.home[lang]);
   <div class="container-page">
     <div class="site-header-inner">
       <a class="brand" href={homeHref} aria-label={`${SITE_NAME} · ${t.common.home}`}>
-        <span class="brand-mark"><Icon name="logo" size={18} /></span>
+        <span class="brand-mark"><Icon name="mark" size={17} /></span>
         <span>{SITE_NAME}</span>
       </a>
 
@@ -58,14 +58,15 @@ const homeHref = withBase(routes.home[lang]);
       <div class="header-actions">
         <LanguageSwitch lang={lang} alternatePath={alternatePath} />
         <a
-          class="btn btn-sm"
+          class="header-link"
           href={GITHUB_REPO}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`${SITE_NAME} · GitHub`}
         >
-          <Icon name="github" size={15} />
+          <Icon name="github" size={14} />
           <span class="hidden sm:inline">{t.nav.github}</span>
+          <Icon name="arrowUpRight" size={12} />
         </a>
       </div>
     </div>

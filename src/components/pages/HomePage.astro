@@ -33,11 +33,21 @@ const wanted = data.games.filter((game) => game.wanted).slice(0, 4);
   alternatePath={routes.home[otherLang(lang)]}
 >
   <section class="container-page hero">
-    <span class="hero-eyebrow">
-      <Icon name="sparkles" size={14} />
-      {t.tagline}
+    <div class="hero-topline">
+      <span>{t.home.topline} <span class="hero-topline-sep">/</span> EST. 2026</span>
+      <span>
+        {data.stats.totalGames} {t.home.statsGames}
+        <span class="hero-topline-sep">/</span>
+        {data.stats.totalProjects} {t.home.statsProjects}
+      </span>
+    </div>
+    <span class="hero-mark" aria-hidden="true">
+      <Icon name="mark" size={78} />
     </span>
-    <h1 class="hero-title">{t.home.heroTitle}</h1>
+
+    <h1 class="hero-title">
+      {t.home.heroTitleA}<em>{t.home.heroTitleEm}</em>{t.home.heroTitleB}
+    </h1>
     <p class="hero-subtitle">{t.home.heroSubtitle}</p>
 
     <Search lang={lang} />
@@ -109,7 +119,7 @@ const wanted = data.games.filter((game) => game.wanted).slice(0, 4);
         <p class="section-subtitle">{t.home.recentSubtitle}</p>
       </div>
     </div>
-    <div class="card-grid">
+    <div class="card-grid project-grid">
       {recent.map((project) => (
         <ProjectCard project={project} lang={lang} showGames showTech={false} />
       ))}
@@ -123,7 +133,7 @@ const wanted = data.games.filter((game) => game.wanted).slice(0, 4);
         <p class="section-subtitle">{t.home.howSubtitle}</p>
       </div>
     </div>
-    <div class="card-grid card-grid-3">
+    <div class="card-grid card-grid-3 how-grid">
       <div class="card card-pad">
         <div class="icon-tile"><Icon name="layers" size={20} /></div>
         <h3 class="mt-3 font-bold">{t.home.howRelationTitle}</h3>
@@ -159,7 +169,7 @@ const wanted = data.games.filter((game) => game.wanted).slice(0, 4);
         <Icon name="arrowRight" size={16} />
       </a>
     </div>
-    <div class="card-grid card-grid-3">
+    <div class="card-grid card-grid-3 project-grid">
       {general.map((project) => (
         <ProjectCard project={project} lang={lang} showGames={false} showTech />
       ))}

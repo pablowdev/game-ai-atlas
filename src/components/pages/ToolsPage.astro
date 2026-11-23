@@ -39,7 +39,7 @@ const data = getData();
         <p class="section-subtitle">{t.tools.note}</p>
       </div>
     </div>
-    <div class="card-grid card-grid-3">
+    <div class="card-grid card-grid-3 project-grid">
       {data.generalProjects.map((project) => (
         <ProjectCard project={project} lang={lang} showGames={false} showTech />
       ))}
@@ -57,7 +57,7 @@ const data = getData();
         </p>
       </div>
     </div>
-    <div class="card-grid card-grid-3">
+    <div class="card-grid card-grid-3 project-grid">
       {data.multiProjects.map((project) => (
         <ProjectCard project={project} lang={lang} showGames showTech />
       ))}

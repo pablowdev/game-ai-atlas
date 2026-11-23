@@ -69,6 +69,7 @@ docs/
   PLAN.md               # product plan and roadmap
   DATA.md               # data dictionary and contribution format
   TAXONOMY.md           # relationship and classification rules
+  DESIGN.md             # visual direction, typography and palette
 .github/
   workflows/            # validate, deploy and scheduled sync
   ISSUE_TEMPLATE/       # add-project and add-game forms
