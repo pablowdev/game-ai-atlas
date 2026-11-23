@@ -20,7 +20,7 @@
     ],
     "homepage": "",
     "description": "Open Python 3 API for making your own Smash Bros: Melee AI that works with Slippi Online",
-    "fetchedAt": "2026-11-23T03:07:00.613Z"
+    "fetchedAt": "2026-11-23T14:47:14.543Z"
   },
   "amidos2006/mario-ai-framework": {
     "fullName": "amidos2006/Mario-AI-Framework",
@@ -37,11 +37,11 @@
     "topics": [],
     "homepage": "https://amidos2006.github.io/Mario-AI-Framework/",
     "description": "10th Anniversary Edition (Not endorsed by Nintendo)",
-    "fetchedAt": "2026-11-23T03:07:00.599Z"
+    "fetchedAt": "2026-11-23T14:47:14.795Z"
   },
   "arnaudstiegler/gamengen-repro": {
     "fullName": "arnaudstiegler/gameNgen-repro",
-    "stars": 61,
+    "stars": 62,
     "forks": 16,
     "openIssues": 1,
     "archived": false,
@@ -54,7 +54,7 @@
     "topics": [],
     "homepage": "",
     "description": "An open source implementation of the gameNgen paper",
-    "fetchedAt": "2026-11-23T03:07:00.573Z"
+    "fetchedAt": "2026-11-23T14:47:14.626Z"
   },
   "art-from-the-machine/mantella": {
     "fullName": "art-from-the-machine/Mantella",
@@ -79,7 +79,7 @@
     ],
     "homepage": "https://art-from-the-machine.github.io/Mantella/",
     "description": "Mantella is a Skyrim and Fallout 4 mod which allows you to naturally speak to NPCs using a Speech-to-Text → LLMs → Text-to-Speech pipeline",
-    "fetchedAt": "2026-11-23T03:07:00.519Z"
+    "fetchedAt": "2026-11-23T14:47:14.655Z"
   },
   "bwapi/bwapi": {
     "fullName": "bwapi/bwapi",
@@ -104,13 +104,13 @@
     ],
     "homepage": "http://bwapi.github.io/",
     "description": "Brood War API",
-    "fetchedAt": "2026-11-23T03:07:00.616Z"
+    "fetchedAt": "2026-11-23T14:47:14.832Z"
   },
   "cabaletta/baritone": {
     "fullName": "cabaletta/baritone",
-    "stars": 9375,
+    "stars": 9374,
     "forks": 2086,
-    "openIssues": 919,
+    "openIssues": 920,
     "archived": false,
     "license": "LGPL-3.0",
     "language": "Java",
@@ -131,7 +131,7 @@
     ],
     "homepage": "",
     "description": "google maps for block game",
-    "fetchedAt": "2026-11-23T03:07:00.979Z"
+    "fetchedAt": "2026-11-23T14:47:15.400Z"
   },
   "chuckhearthstone/silverfish": {
     "fullName": "ChuckHearthstone/SilverFish",
@@ -148,7 +148,7 @@
     "topics": [],
     "homepage": "",
     "description": "Hearthstone AI derived from https://github.com/noHero123/silverfish",
-    "fetchedAt": "2026-11-23T03:07:01.103Z"
+    "fetchedAt": "2026-11-23T14:47:15.349Z"
   },
   "chynl/snake": {
     "fullName": "chynl/snake",
@@ -176,7 +176,7 @@
     ],
     "homepage": "",
     "description": "Playing the game of snake with AI.",
-    "fetchedAt": "2026-11-23T03:07:01.174Z"
+    "fetchedAt": "2026-11-23T14:47:15.596Z"
   },
   "csslab/maia-chess": {
     "fullName": "CSSLab/maia-chess",
@@ -199,7 +199,7 @@
     ],
     "homepage": "https://maiachess.com",
     "description": "Maia is a human-like neural network chess engine trained on millions of human games.",
-    "fetchedAt": "2026-11-23T03:07:01.107Z"
+    "fetchedAt": "2026-11-23T14:47:15.499Z"
   },
   "datamllab/rlcard": {
     "fullName": "datamllab/rlcard",
@@ -235,7 +235,7 @@
     ],
     "homepage": "http://www.rlcard.org",
     "description": "Reinforcement Learning / AI Bots in Card (Poker) Games - Blackjack, Leduc, Texas, DouDizhu, Mahjong, UNO.",
-    "fetchedAt": "2026-11-23T03:07:01.238Z"
+    "fetchedAt": "2026-11-23T14:47:15.647Z"
   },
   "diambra/arena": {
     "fullName": "diambra/arena",
@@ -262,11 +262,11 @@
     ],
     "homepage": "https://docs.diambra.ai",
     "description": "DIAMBRA Arena: a New Reinforcement Learning Platform for Research and Experimentation",
-    "fetchedAt": "2026-11-23T03:07:01.657Z"
+    "fetchedAt": "2026-11-23T14:47:16.219Z"
   },
   "equim-chan/mortal": {
     "fullName": "Equim-chan/Mortal",
-    "stars": 1620,
+    "stars": 1621,
     "forks": 235,
     "openIssues": 13,
     "archived": false,
@@ -288,7 +288,7 @@
     ],
     "homepage": "https://mortal.ekyu.moe",
     "description": "🚀🀄️ A fast and strong AI for riichi mahjong, powered by Rust and deep reinforcement learning.",
-    "fetchedAt": "2026-11-23T03:07:01.519Z"
+    "fetchedAt": "2026-11-23T14:47:16.181Z"
   },
   "erickfm/mimic": {
     "fullName": "erickfm/MIMIC",
@@ -305,7 +305,7 @@
     "topics": [],
     "homepage": null,
     "description": "Melee Imitation Model for Input Cloning",
-    "fetchedAt": "2026-11-23T03:07:01.710Z"
+    "fetchedAt": "2026-11-23T14:47:16.383Z"
   },
   "ericsteinberger/pokerrl": {
     "fullName": "EricSteinberger/PokerRL",
@@ -331,7 +331,7 @@
     ],
     "homepage": null,
     "description": "Framework for Multi-Agent Deep Reinforcement Learning in Poker",
-    "fetchedAt": "2026-11-23T03:07:01.754Z"
+    "fetchedAt": "2026-11-23T14:47:16.479Z"
   },
   "facebookresearch/minihack": {
     "fullName": "facebookresearch/minihack",
@@ -348,7 +348,7 @@
     "topics": [],
     "homepage": "",
     "description": "MiniHack the Planet: A Sandbox for Open-Ended Reinforcement Learning Research",
-    "fetchedAt": "2026-11-23T03:07:01.907Z"
+    "fetchedAt": "2026-11-23T14:47:16.973Z"
   },
   "farama-foundation/arcade-learning-environment": {
     "fullName": "Farama-Foundation/Arcade-Learning-Environment",
@@ -365,18 +365,18 @@
     "topics": [],
     "homepage": "https://ale.farama.org/",
     "description": "A simple framework that allows researchers and hobbyists to develop AI agents for Atari 2600 games",
-    "fetchedAt": "2026-11-23T03:07:02.056Z"
+    "fetchedAt": "2026-11-23T14:47:16.963Z"
   },
   "farama-foundation/gymnasium": {
     "fullName": "Farama-Foundation/Gymnasium",
-    "stars": 12846,
-    "forks": 1546,
+    "stars": 12850,
+    "forks": 1548,
     "openIssues": 137,
     "archived": false,
     "license": "MIT",
     "language": "Python",
-    "lastCommitAt": "2026-11-22T13:53:42Z",
-    "pushedAt": "2026-11-22T13:57:11Z",
+    "lastCommitAt": "2026-11-23T10:36:46Z",
+    "pushedAt": "2026-11-23T10:39:25Z",
     "createdAt": "2022-09-08T01:58:05Z",
     "defaultBranch": "main",
     "topics": [
@@ -386,18 +386,18 @@
     ],
     "homepage": "https://gymnasium.farama.org",
     "description": "A standard API for single-agent reinforcement learning environments, with popular reference environments and related utilities (formerly Gym)",
-    "fetchedAt": "2026-11-23T03:07:02.230Z"
+    "fetchedAt": "2026-11-23T14:47:16.912Z"
   },
   "farama-foundation/vizdoom": {
     "fullName": "Farama-Foundation/ViZDoom",
-    "stars": 2112,
+    "stars": 2113,
     "forks": 460,
-    "openIssues": 41,
+    "openIssues": 40,
     "archived": false,
     "license": null,
     "language": "C++",
-    "lastCommitAt": "2026-11-22T00:48:39Z",
-    "pushedAt": "2026-11-22T01:00:56Z",
+    "lastCommitAt": "2026-11-23T10:10:40Z",
+    "pushedAt": "2026-11-23T10:14:04Z",
     "createdAt": "2015-06-26T18:38:23Z",
     "defaultBranch": "main",
     "topics": [
@@ -412,11 +412,11 @@
     ],
     "homepage": "https://vizdoom.farama.org/",
     "description": "Reinforcement Learning environments based on the 1993 game Doom :godmode:",
-    "fetchedAt": "2026-11-23T03:07:02.261Z"
+    "fetchedAt": "2026-11-23T14:47:17.150Z"
   },
   "fatelessai/skyrimnet-gameplugin": {
     "fullName": "FatelessAI/SkyrimNet-GamePlugin",
-    "stars": 389,
+    "stars": 390,
     "forks": 52,
     "openIssues": 185,
     "archived": false,
@@ -436,11 +436,11 @@
     ],
     "homepage": "https://fateless.ai",
     "description": "AI NPCs for Skyrim that talk, remember, react and act, voiced in real time. By Fateless.",
-    "fetchedAt": "2026-11-23T03:07:02.208Z"
+    "fetchedAt": "2026-11-23T14:47:17.586Z"
   },
   "google-deepmind/open_spiel": {
     "fullName": "google-deepmind/open_spiel",
-    "stars": 5606,
+    "stars": 5607,
     "forks": 1221,
     "openIssues": 95,
     "archived": false,
@@ -459,11 +459,11 @@
     ],
     "homepage": "",
     "description": "OpenSpiel is a collection of environments and algorithms for research in general reinforcement learning and search/planning in games.",
-    "fetchedAt": "2026-11-23T03:07:02.393Z"
+    "fetchedAt": "2026-11-23T14:47:17.761Z"
   },
   "google-deepmind/pysc2": {
     "fullName": "google-deepmind/pysc2",
-    "stars": 8338,
+    "stars": 8339,
     "forks": 1164,
     "openIssues": 65,
     "archived": false,
@@ -483,7 +483,7 @@
     ],
     "homepage": "",
     "description": "StarCraft II Learning Environment",
-    "fetchedAt": "2026-11-23T03:07:01.427Z"
+    "fetchedAt": "2026-11-23T14:47:16.128Z"
   },
   "google/dopamine": {
     "fullName": "google/dopamine",
@@ -506,11 +506,11 @@
     ],
     "homepage": "https://github.com/google/dopamine",
     "description": "Dopamine is a research framework for fast prototyping of reinforcement learning algorithms. ",
-    "fetchedAt": "2026-11-23T03:07:02.596Z"
+    "fetchedAt": "2026-11-23T14:47:17.764Z"
   },
   "hsahovic/poke-env": {
     "fullName": "hsahovic/poke-env",
-    "stars": 541,
+    "stars": 542,
     "forks": 149,
     "openIssues": 38,
     "archived": false,
@@ -536,7 +536,7 @@
     ],
     "homepage": "https://poke-env.readthedocs.io/",
     "description": "Poke-env: Python Interface for Pokemon Showdown Bots",
-    "fetchedAt": "2026-11-23T03:07:02.725Z"
+    "fetchedAt": "2026-11-23T14:47:18.014Z"
   },
   "jackhopkins/factorio-learning-environment": {
     "fullName": "JackHopkins/factorio-learning-environment",
@@ -553,7 +553,7 @@
     "topics": [],
     "homepage": "https://jackhopkins.github.io/factorio-learning-environment/versions/0.3.0.html",
     "description": "A non-saturating, open-ended environment for evaluating LLMs in Factorio",
-    "fetchedAt": "2026-11-23T03:07:02.684Z"
+    "fetchedAt": "2026-11-23T14:47:17.942Z"
   },
   "jjyg/df-ai": {
     "fullName": "jjyg/df-ai",
@@ -570,11 +570,11 @@
     "topics": [],
     "homepage": null,
     "description": "dwarf fortress AI script",
-    "fetchedAt": "2026-11-23T03:07:02.727Z"
+    "fetchedAt": "2026-11-23T14:47:18.355Z"
   },
   "junxiaosong/alphazero_gomoku": {
     "fullName": "junxiaosong/AlphaZero_Gomoku",
-    "stars": 3641,
+    "stars": 3642,
     "forks": 1017,
     "openIssues": 81,
     "archived": false,
@@ -601,7 +601,7 @@
     ],
     "homepage": "",
     "description": "An implementation of the AlphaZero algorithm for Gomoku (also called Gobang or Five in a Row) ",
-    "fetchedAt": "2026-11-23T03:07:02.908Z"
+    "fetchedAt": "2026-11-23T14:47:18.531Z"
   },
   "kautenja/gym-super-mario-bros": {
     "fullName": "Kautenja/gym-super-mario-bros",
@@ -628,7 +628,7 @@
     ],
     "homepage": "",
     "description": "Gymnasium environments for NES Mario games, with task metadata, reward instrumentation, and reproducible evaluation interfaces.",
-    "fetchedAt": "2026-11-23T03:07:03.021Z"
+    "fetchedAt": "2026-11-23T14:47:18.579Z"
   },
   "kwai/douzero": {
     "fullName": "kwai/DouZero",
@@ -650,7 +650,7 @@
     ],
     "homepage": "https://douzero.org/",
     "description": "[ICML 2021] DouZero: Mastering DouDizhu with Self-Play Deep Reinforcement Learning | 斗地主AI",
-    "fetchedAt": "2026-11-23T03:07:03.168Z"
+    "fetchedAt": "2026-11-23T14:47:18.967Z"
   },
   "leela-zero/leela-zero": {
     "fullName": "leela-zero/leela-zero",
@@ -667,7 +667,7 @@
     "topics": [],
     "homepage": null,
     "description": "Go engine with no human-provided knowledge, modeled after the AlphaGo Zero paper.",
-    "fetchedAt": "2026-11-23T03:07:03.314Z"
+    "fetchedAt": "2026-11-23T14:47:18.726Z"
   },
   "leelachesszero/lc0": {
     "fullName": "LeelaChessZero/lc0",
@@ -677,8 +677,8 @@
     "archived": false,
     "license": "GPL-3.0",
     "language": "C++",
-    "lastCommitAt": "2026-11-08T16:51:36Z",
-    "pushedAt": "2026-11-08T16:51:36Z",
+    "lastCommitAt": "2026-11-23T07:16:16Z",
+    "pushedAt": "2026-11-23T07:16:16Z",
     "createdAt": "2018-05-30T19:41:42Z",
     "defaultBranch": "master",
     "topics": [
@@ -697,13 +697,13 @@
     ],
     "homepage": "https://lczero.org/",
     "description": "Open source neural network chess engine with GPU acceleration and broad hardware support.",
-    "fetchedAt": "2026-11-23T03:07:03.200Z"
+    "fetchedAt": "2026-11-23T14:47:19.093Z"
   },
   "lightvector/katago": {
     "fullName": "lightvector/KataGo",
-    "stars": 5306,
-    "forks": 787,
-    "openIssues": 518,
+    "stars": 5309,
+    "forks": 788,
+    "openIssues": 519,
     "archived": false,
     "license": "NOASSERTION",
     "language": "C++",
@@ -714,13 +714,13 @@
     "topics": [],
     "homepage": "https://katagotraining.org/",
     "description": "GTP engine and self-play learning in Go",
-    "fetchedAt": "2026-11-23T03:07:03.377Z"
+    "fetchedAt": "2026-11-23T14:47:19.231Z"
   },
   "magefree/mage": {
     "fullName": "magefree/mage",
     "stars": 2415,
     "forks": 996,
-    "openIssues": 1818,
+    "openIssues": 1820,
     "archived": false,
     "license": "MIT",
     "language": "Java",
@@ -751,7 +751,7 @@
     ],
     "homepage": "https://xmage.today",
     "description": "XMage - Magic Another Game Engine",
-    "fetchedAt": "2026-11-23T03:07:03.490Z"
+    "fetchedAt": "2026-11-23T14:47:19.327Z"
   },
   "microsoft/jericho": {
     "fullName": "microsoft/jericho",
@@ -772,7 +772,7 @@
     ],
     "homepage": "",
     "description": "A learning environment for man-made Interactive Fiction games.",
-    "fetchedAt": "2026-11-23T03:07:03.677Z"
+    "fetchedAt": "2026-11-23T14:47:19.526Z"
   },
   "microsoft/malmo": {
     "fullName": "microsoft/malmo",
@@ -789,7 +789,7 @@
     "topics": [],
     "homepage": "https://www.microsoft.com/en-us/research/project/project-malmo/",
     "description": "Project Malmo is a platform for Artificial Intelligence experimentation and research built on top of Minecraft. We aim to inspire a new generation of research into challenging new problems presented by this unique environment. --- For installation instructions, scroll down to *Getting Started* below, or visit the project page for more information:",
-    "fetchedAt": "2026-11-23T03:07:03.674Z"
+    "fetchedAt": "2026-11-23T14:47:19.749Z"
   },
   "minedojo/mineclip": {
     "fullName": "MineDojo/MineCLIP",
@@ -806,7 +806,7 @@
     "topics": [],
     "homepage": "",
     "description": "Foundation Model for MineDojo",
-    "fetchedAt": "2026-11-23T03:07:03.850Z"
+    "fetchedAt": "2026-11-23T14:47:20.006Z"
   },
   "minedojo/minedojo": {
     "fullName": "MineDojo/MineDojo",
@@ -823,11 +823,11 @@
     "topics": [],
     "homepage": null,
     "description": "Building Open-Ended Embodied Agents with Internet-Scale Knowledge",
-    "fetchedAt": "2026-11-23T03:07:03.857Z"
+    "fetchedAt": "2026-11-23T14:47:19.920Z"
   },
   "minedojo/voyager": {
     "fullName": "MineDojo/Voyager",
-    "stars": 7341,
+    "stars": 7340,
     "forks": 710,
     "openIssues": 7,
     "archived": false,
@@ -845,7 +845,7 @@
     ],
     "homepage": "https://voyager.minedojo.org/",
     "description": "An Open-Ended Embodied Agent with Large Language Models",
-    "fetchedAt": "2026-11-23T03:07:03.945Z"
+    "fetchedAt": "2026-11-23T14:47:20.006Z"
   },
   "minerllabs/minerl": {
     "fullName": "minerllabs/minerl",
@@ -862,7 +862,7 @@
     "topics": [],
     "homepage": "http://minerl.io/docs/",
     "description": "MineRL Competition for Sample Efficient Reinforcement Learning - Python Package",
-    "fetchedAt": "2026-11-23T03:07:04.124Z"
+    "fetchedAt": "2026-11-23T14:47:20.356Z"
   },
   "mshumer/claude-of-duty": {
     "fullName": "mshumer/Claude-of-Duty",
@@ -879,7 +879,7 @@
     "topics": [],
     "homepage": null,
     "description": "A Call of Duty-quality FPS in Three.js, built from a single prompt.",
-    "fetchedAt": "2026-11-23T03:07:04.098Z"
+    "fetchedAt": "2026-11-23T14:47:20.408Z"
   },
   "nethack-le/nle": {
     "fullName": "NetHack-LE/nle",
@@ -896,7 +896,7 @@
     "topics": [],
     "homepage": null,
     "description": "The NetHack Learning Environment",
-    "fetchedAt": "2026-11-23T03:07:04.434Z"
+    "fetchedAt": "2026-11-23T14:47:21.094Z"
   },
   "nneonneo/2048-ai": {
     "fullName": "nneonneo/2048-ai",
@@ -913,7 +913,7 @@
     "topics": [],
     "homepage": null,
     "description": "AI for the 2048 game",
-    "fetchedAt": "2026-11-23T03:07:04.347Z"
+    "fetchedAt": "2026-11-23T14:47:20.645Z"
   },
   "nuno-faria/tetris-ai": {
     "fullName": "nuno-faria/tetris-ai",
@@ -935,13 +935,13 @@
     ],
     "homepage": null,
     "description": "A deep reinforcement learning bot that plays tetris",
-    "fetchedAt": "2026-11-23T03:07:04.438Z"
+    "fetchedAt": "2026-11-23T14:47:20.748Z"
   },
   "official-stockfish/stockfish": {
     "fullName": "official-stockfish/Stockfish",
-    "stars": 17466,
-    "forks": 3176,
-    "openIssues": 42,
+    "stars": 17473,
+    "forks": 3178,
+    "openIssues": 43,
     "archived": false,
     "license": "GPL-3.0",
     "language": "C++",
@@ -958,7 +958,7 @@
     ],
     "homepage": "https://stockfishchess.org/",
     "description": "A free and strong UCI chess engine",
-    "fetchedAt": "2026-11-23T03:07:04.556Z"
+    "fetchedAt": "2026-11-23T14:47:21.058Z"
   },
   "oidahdsah0/rimworld_ai_framework": {
     "fullName": "oidahdsah0/Rimworld_AI_Framework",
@@ -987,12 +987,12 @@
     ],
     "homepage": "https://github.com/oidahdsah0/Rimworld_AI_Framework",
     "description": " A revolutionary AI-powered framework for RimWorld that brings Large Language Models directly into colony management. Features intelligent administrative terminals, context-aware decision making, and seamless AI integration for enhanced gameplay experiences.",
-    "fetchedAt": "2026-11-23T03:07:04.564Z"
+    "fetchedAt": "2026-11-23T14:47:21.860Z"
   },
   "openai/baselines": {
     "fullName": "openai/baselines",
     "stars": 16783,
-    "forks": 4914,
+    "forks": 4913,
     "openIssues": 502,
     "archived": false,
     "license": "MIT",
@@ -1004,11 +1004,11 @@
     "topics": [],
     "homepage": "",
     "description": "OpenAI Baselines: high-quality implementations of reinforcement learning algorithms",
-    "fetchedAt": "2026-11-23T03:07:04.844Z"
+    "fetchedAt": "2026-11-23T14:47:21.391Z"
   },
   "openai/gym": {
     "fullName": "openai/gym",
-    "stars": 37235,
+    "stars": 37234,
     "forks": 8664,
     "openIssues": 128,
     "archived": true,
@@ -1021,7 +1021,7 @@
     "topics": [],
     "homepage": "https://www.gymlibrary.dev",
     "description": "A toolkit for developing and comparing reinforcement learning algorithms.",
-    "fetchedAt": "2026-11-23T03:07:04.924Z"
+    "fetchedAt": "2026-11-23T14:47:21.611Z"
   },
   "openai/random-network-distillation": {
     "fullName": "openai/random-network-distillation",
@@ -1040,7 +1040,7 @@
     ],
     "homepage": "https://openai.com/blog/reinforcement-learning-with-prediction-based-rewards/",
     "description": "Code for the paper \"Exploration by Random Network Distillation\"",
-    "fetchedAt": "2026-11-23T03:07:04.912Z"
+    "fetchedAt": "2026-11-23T14:47:21.789Z"
   },
   "openai/retro": {
     "fullName": "openai/retro",
@@ -1057,7 +1057,7 @@
     "topics": [],
     "homepage": null,
     "description": "Retro Games in Gym",
-    "fetchedAt": "2026-11-23T03:07:05.111Z"
+    "fetchedAt": "2026-11-23T14:47:21.772Z"
   },
   "opendilab/di-star": {
     "fullName": "opendilab/DI-star",
@@ -1082,7 +1082,7 @@
     ],
     "homepage": "",
     "description": "An artificial intelligence platform for the StarCraft II with large-scale distributed training and grand-master agents.",
-    "fetchedAt": "2026-11-23T03:07:05.103Z"
+    "fetchedAt": "2026-11-23T14:47:22.358Z"
   },
   "ov3y/2048-ai": {
     "fullName": "ov3y/2048-AI",
@@ -1099,7 +1099,7 @@
     "topics": [],
     "homepage": null,
     "description": null,
-    "fetchedAt": "2026-11-23T03:07:05.274Z"
+    "fetchedAt": "2026-11-23T14:47:22.477Z"
   },
   "oxwhirl/smac": {
     "fullName": "oxwhirl/smac",
@@ -1122,7 +1122,7 @@
     ],
     "homepage": "",
     "description": "SMAC: The StarCraft Multi-Agent Challenge",
-    "fetchedAt": "2026-11-23T03:07:05.420Z"
+    "fetchedAt": "2026-11-23T14:47:22.586Z"
   },
   "peter1591/hearthstone-ai": {
     "fullName": "peter1591/hearthstone-ai",
@@ -1145,11 +1145,11 @@
     ],
     "homepage": "",
     "description": "A Hearthstone AI based on Monte Carlo tree search and neural nets written in modern C++.",
-    "fetchedAt": "2026-11-23T03:07:05.428Z"
+    "fetchedAt": "2026-11-23T14:47:22.430Z"
   },
   "pmariglia/foul-play": {
     "fullName": "pmariglia/foul-play",
-    "stars": 385,
+    "stars": 386,
     "forks": 227,
     "openIssues": 9,
     "archived": false,
@@ -1172,7 +1172,7 @@
     ],
     "homepage": "",
     "description": "A Pokemon Showdown Battle AI",
-    "fetchedAt": "2026-11-23T03:07:05.558Z"
+    "fetchedAt": "2026-11-23T14:47:22.593Z"
   },
   "ppaquette/gym-doom": {
     "fullName": "ppaquette/gym-doom",
@@ -1189,7 +1189,7 @@
     "topics": [],
     "homepage": null,
     "description": "Gym - Doom environments based on VizDoom.",
-    "fetchedAt": "2026-11-23T03:07:05.614Z"
+    "fetchedAt": "2026-11-23T14:47:23.080Z"
   },
   "prismarinejs/mineflayer": {
     "fullName": "PrismarineJS/mineflayer",
@@ -1213,7 +1213,7 @@
     ],
     "homepage": "https://prismarinejs.github.io/mineflayer/",
     "description": "Create Minecraft bots with a powerful, stable, and high level JavaScript API.",
-    "fetchedAt": "2026-11-23T03:07:05.752Z"
+    "fetchedAt": "2026-11-23T14:47:23.446Z"
   },
   "pwhiddy/pokemonredexperiments": {
     "fullName": "PWhiddy/PokemonRedExperiments",
@@ -1230,7 +1230,7 @@
     "topics": [],
     "homepage": "",
     "description": "Playing Pokemon Red with Reinforcement Learning",
-    "fetchedAt": "2026-11-23T03:07:05.852Z"
+    "fetchedAt": "2026-11-23T14:47:23.535Z"
   },
   "rlbot/rlbot": {
     "fullName": "RLBot/RLBot",
@@ -1250,7 +1250,7 @@
     ],
     "homepage": "",
     "description": "A framework that allows people to write their own Rocket League bots.",
-    "fetchedAt": "2026-11-23T03:07:05.928Z"
+    "fetchedAt": "2026-11-23T14:47:23.327Z"
   },
   "rlgym/rlgym": {
     "fullName": "RLGym/rlgym",
@@ -1272,7 +1272,7 @@
     ],
     "homepage": "http://rlgym.org/rlgym/",
     "description": "A Gym-like environment for Reinforcement Learning in Rocket League",
-    "fetchedAt": "2026-11-23T03:07:06.021Z"
+    "fetchedAt": "2026-11-23T14:47:23.330Z"
   },
   "rolv-arild/necto": {
     "fullName": "Rolv-Arild/Necto",
@@ -1289,7 +1289,7 @@
     "topics": [],
     "homepage": null,
     "description": null,
-    "fetchedAt": "2026-11-23T03:07:06.018Z"
+    "fetchedAt": "2026-11-23T14:47:23.755Z"
   },
   "ryancampbell/kart-royale": {
     "fullName": "ryancampbell/kart-royale",
@@ -1315,7 +1315,7 @@
     ],
     "homepage": "https://racing.ryancampbell.com",
     "description": "A kart racing game in the browser with zero art assets — every texture, mesh, material and sound is generated in code. Built by a fleet of Claude agents in four days.",
-    "fetchedAt": "2026-11-23T03:07:06.198Z"
+    "fetchedAt": "2026-11-23T14:47:24.057Z"
   },
   "sirmammingtonham/alphastone": {
     "fullName": "sirmammingtonham/alphastone",
@@ -1342,7 +1342,7 @@
     ],
     "homepage": "",
     "description": "Using self-play, MCTS, and a deep neural network to create a hearthstone ai player",
-    "fetchedAt": "2026-11-23T03:07:06.312Z"
+    "fetchedAt": "2026-11-23T14:47:24.931Z"
   },
   "suragnair/alpha-zero-general": {
     "fullName": "suragnair/alpha-zero-general",
@@ -1377,7 +1377,7 @@
     ],
     "homepage": "",
     "description": "A clean implementation based on AlphaZero for any game in any framework + tutorial + Othello/Gobang/TicTacToe/Connect4 and more",
-    "fetchedAt": "2026-11-23T03:07:06.403Z"
+    "fetchedAt": "2026-11-23T14:47:24.352Z"
   },
   "tensorflow/minigo": {
     "fullName": "tensorflow/minigo",
@@ -1394,7 +1394,7 @@
     "topics": [],
     "homepage": "",
     "description": "An open-source implementation of the AlphaGoZero algorithm",
-    "fetchedAt": "2026-11-23T03:07:06.501Z"
+    "fetchedAt": "2026-11-23T14:47:24.307Z"
   },
   "torchcraft/torchcraft": {
     "fullName": "TorchCraft/TorchCraft",
@@ -1419,7 +1419,7 @@
     ],
     "homepage": "",
     "description": "Connecting Torch to StarCraft",
-    "fetchedAt": "2026-11-23T03:07:06.452Z"
+    "fetchedAt": "2026-11-23T14:47:24.422Z"
   },
   "trackmania-rl/tmrl": {
     "fullName": "trackmania-rl/tmrl",
@@ -1442,7 +1442,7 @@
     ],
     "homepage": "https://pypi.org/project/tmrl",
     "description": "Reinforcement Learning for real-time applications",
-    "fetchedAt": "2026-11-23T03:07:06.725Z"
+    "fetchedAt": "2026-11-23T14:47:24.928Z"
   },
   "tyagidevansh/donkey-kong-ai": {
     "fullName": "tyagidevansh/donkey-kong-ai",
@@ -1459,7 +1459,7 @@
     "topics": [],
     "homepage": "",
     "description": "Implementing the classic in pygame and training a NEAT AI to play it!",
-    "fetchedAt": "2026-11-23T03:07:06.856Z"
+    "fetchedAt": "2026-11-23T14:47:25.098Z"
   },
   "ugo-nama-kun/gym_torcs": {
     "fullName": "ugo-nama-kun/gym_torcs",
@@ -1476,12 +1476,12 @@
     "topics": [],
     "homepage": null,
     "description": null,
-    "fetchedAt": "2026-11-23T03:07:06.853Z"
+    "fetchedAt": "2026-11-23T14:47:25.053Z"
   },
   "unity-technologies/ml-agents": {
     "fullName": "Unity-Technologies/ml-agents",
     "stars": 19890,
-    "forks": 4523,
+    "forks": 4522,
     "openIssues": 23,
     "archived": false,
     "license": "NOASSERTION",
@@ -1501,7 +1501,7 @@
     ],
     "homepage": "https://unity.com/products/machine-learning-agents",
     "description": "The Unity Machine Learning Agents Toolkit (ML-Agents) is an open-source project that enables games and simulations to serve as environments for training intelligent agents using deep reinforcement learning and imitation learning.",
-    "fetchedAt": "2026-11-23T03:07:06.923Z"
+    "fetchedAt": "2026-11-23T14:47:25.115Z"
   },
   "wimacs/diffusion_tetris": {
     "fullName": "Wimacs/diffusion_tetris",
@@ -1518,7 +1518,7 @@
     "topics": [],
     "homepage": null,
     "description": "GameNGen style diffusion model tetris game",
-    "fetchedAt": "2026-11-23T03:07:07.035Z"
+    "fetchedAt": "2026-11-23T14:47:25.702Z"
   },
   "yenchenlin/deeplearningflappybird": {
     "fullName": "yenchenlin/DeepLearningFlappyBird",
@@ -1539,6 +1539,6 @@
     ],
     "homepage": "",
     "description": "Flappy Bird hack using Deep Reinforcement Learning (Deep Q-learning).",
-    "fetchedAt": "2026-11-23T03:07:07.153Z"
+    "fetchedAt": "2026-11-23T14:47:25.646Z"
   }
 }
