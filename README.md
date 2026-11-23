@@ -4,7 +4,7 @@ An open, bilingual directory of open-source AI projects based on existing video 
 
 Search for a game and see the agents, remakes, mods, training environments, world models and tools built around it, with the latest GitHub activity, license and requirements.
 
-- **Site:** [pabwass.github.io/game-ai-atlas](https://pabwass.github.io/game-ai-atlas/) (once deployed)
+- **Site:** [pablowdev.github.io/game-ai-atlas](https://pablowdev.github.io/game-ai-atlas/) (once deployed)
 - **Español:** [README.es.md](./README.es.md)
 - **Data:** curated YAML + automatically synced GitHub metadata
 - **Stack:** Astro, TypeScript, Tailwind CSS, MiniSearch, GitHub Pages

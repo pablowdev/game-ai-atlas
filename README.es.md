@@ -4,7 +4,7 @@ Directorio abierto y bilingüe de proyectos de código abierto que usan IA y est
 
 Busca un juego y descubre agentes, remakes, mods, entornos de entrenamiento, world models y herramientas creadas a su alrededor, con la última actividad de GitHub, licencia y requisitos.
 
-- **Sitio:** [pabwass.github.io/game-ai-atlas](https://pabwass.github.io/game-ai-atlas/) (cuando esté publicado)
+- **Sitio:** [pablowdev.github.io/game-ai-atlas](https://pablowdev.github.io/game-ai-atlas/) (cuando esté publicado)
 - **English:** [README.md](./README.md)
 - **Datos:** YAML curado + metadata de GitHub sincronizada automáticamente
 - **Stack:** Astro, TypeScript, Tailwind CSS, MiniSearch, GitHub Pages

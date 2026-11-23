@@ -260,7 +260,7 @@ Game AI Atlas indexes agents, clones, mods, training environments, world models 
 
 ## Source
 
-https://github.com/pabwass/game-ai-atlas
+https://github.com/pablowdev/game-ai-atlas
 `;
 
 await fs.writeFile(path.join(process.cwd(), "public", "llms.txt"), llms, "utf8");

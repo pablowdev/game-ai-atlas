@@ -4,8 +4,8 @@ Thanks for helping build Game AI Atlas. The catalog is only as good as its curat
 
 ## Ways to contribute
 
-- **Add a project** with the [Add project](https://github.com/pabwass/game-ai-atlas/issues/new?template=add-project.yml) issue form.
-- **Add a game** with the [Add game](https://github.com/pabwass/game-ai-atlas/issues/new?template=add-game.yml) issue form.
+- **Add a project** with the [Add project](https://github.com/pablowdev/game-ai-atlas/issues/new?template=add-project.yml) issue form.
+- **Add a game** with the [Add game](https://github.com/pablowdev/game-ai-atlas/issues/new?template=add-game.yml) issue form.
 - **Send a pull request** with the YAML and, if needed, the UI change.
 - **Fix data**: stale links, wrong license, wrong classification, missing aliases.
 - **Improve the site**: accessibility, search, performance, bilingual copy.
